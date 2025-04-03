@@ -1,0 +1,78 @@
+@font-face {
+    src: url(fonts/IBMPlexSerif-Italic.ttf);
+    font-family: IBMPlexSerif-Italic;
+}
+
+@font-face {
+    src: url(fonts/IBMPlexSerif-Regular.ttf);
+    font-family: IBMPlexSerif-Regular;
+}
+
+@font-face {
+    src: url(fonts/IBMPlexSans-Regular.ttf);
+    font-family: IBMPlexSans-Regular;
+}
+
+body {
+
+    font-size: 16px;
+    line-height: 18px;
+ 
+    background: url(h-632.gif);
+
+    background-color: #a4adb9;
+    /**background-image: url(grass_seamless_texture_1417.jpg);**/
+}
+
+#SkipIntro {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 42;
+}
+
+h1{
+    font-family: IBMPlexSans-regular;
+}
+
+p{
+    font-family: IBMPlexSerif-italic;
+}
+
+
+.div.r1{
+    transform: translate(1000px 100px);
+
+}
+
+a img {
+    border: 0;
+}
+
+    #Teleportation, #View {
+        position: absolute;
+        bottom: 10%;
+        right: 10%;
+    }
+    
+    #View {
+        position: fixed;
+        display: none;
+    }
+    
+#CenterOfTheUniverse {
+    position: absolute;
+    width: 640px;
+}
+
+#Updates {
+    position: absolute;
+}
+
+#Books {
+    position: absolute;
+    left: 1332px;
+    top: 100px;
+}
