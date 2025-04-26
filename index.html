@@ -1,30 +1,174 @@
 <!doctype html>
 
 <html>
-  <head>
-    <title>out*cene_wander</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="assets/typography.css" rel="stylesheet">
+        <link href="assets/movement.css" rel="stylesheet">
+        <link href="assets/images.css" rel="stylesheet">
+        <title>out*cene_wander</title>
+        <link href="assets/favicon.png" rel="icon">
+        <script src="assets/slay.js" type="text/javascript"></script>
 
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&amp;family=Roboto+Mono:ital,wght@0,100..700;1,100..700&amp;display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="walk.css">
-  </head>
+
+    </head>  
+
 
   <body>
+    
 
 
-    <div style="position: absolute; top: 0px; left: 0px; width: 10000px; height: 10000px;">
+
+    <button id="teleport" onclick="scrollToElement()">Прокрутить до элемента</button>
+    <div id="targetElement" style="height: 10px; width: 10px; background-color: aqua;">
+      Целевой элемент
     </div>
-    <div id="CenterOfTheUniverse" style="position: absolute; left: 3000px; top: 5000px;">
 
+    <nav class="navbar">
+        <ul>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact</a>
+        </ul>
+    </nav>
+
+
+    <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
+
+
+    
+    <script type="text/javascript">
+        //Функция показа
+        function show(state, id){
+            if(id!=null)
+            document.getElementById(id).style.display = state;
+             else{
+                document.getElementById('Fpp-window').style.display = state;
+                document.getElementById('Fpp-window-second').style.display = state;
+             }
+        document.getElementById('Fpp-background').style.display = state;
+        }
         
+    </script>   
+    <div onclick="show('none')" id="Fpp-background"></div>
+    
+    <!--01-->
+    <div id="popup1" class="Fpp-window">
+      <p>“[…] not only is landscape the medium of naturally existing forces, flows and processes, but the very matter that constitutes landscape itself — the rocks, the soils, the fossils it produces — all add temporal, ecological and geological dimensionality to its vitality — its non-human agency. On the other hand, this agency, if well-documented in its materiality, can play a more interpretive role in constituting a kind of historical narrative of human culture — a means to prove the recent and deep past of the human condition in relation to objects extracted from or placed within the landscape. Taken together, these various discursive tendencies instigate a practice in which the rigorous documentation of materials, plants and their unique ecologies can be curated to reveal a kind of social and cultural agency that passes through the material fragments of landscape, entangling the human and non-human worlds in a complex, more-than-human ecology. Landscape, we could say, appears today as a kind of as-found archive of social and cultural history.” (Ross Exo Adams, “Landscapes of Post-History</p>
+      <button onclick="show('none', 'popup1')"> << </button>
+    </div>
+    <a href="#open" onclick="show('block', 'popup1')"><!--Открыть-->
+      <p class="p1" id="pop1">[...]</p>
+    </a>
+    
+    <!--02-->
+    <div id="popup2" class="Fpp-window">
+      <p>sand is not a barren or dead material. Instead, it is permeated, physically, literally, with stories.</p>
+      <button onclick="show('none', 'popup2')"> << </button>
+    </div>
+    <a href="#open" onclick="show('block', 'popup2')"><!--Открыть-->
+      <p class="p1" id="pop2">sand</p>
+    </a>
+    
+    <div id="popup3" class="Fpp-window">
+        <p>As I learned from the poet-philosopher John O’Donohue the word beauty partly derives from the Celtic word ‘kalon’ and ‘kalein’, which means ‘to call, to be called’. So when I talk about beauty, what I mean is that moment of calling — for example when you stand in a vast landscape and you feel fully alive and at one with the world, you are ‘called into being’. I would hope we are all able to feel that as often as possible in our lives. For me something is beautiful if it conjures up that awe in you.</p>
+        <button onclick="show('none', 'popup3')"> << </button>
+      </div>
+      <a href="#open" onclick="show('block', 'popup3')"><!--Открыть-->
+        <p class="p1" id="pop3">beauty</p>
+      </a>
 
-         
-<!--книшки-->
+
+
+
+  <img src="sphereR40.gif" id="answ1" alt="сияющая сфера 40см в диаметре"title="сияющей сферой 40см в диаметре">
+
+
+
+
+
+
+    <!--кнопка дальше
+    <p id="intro-link">
+		<a href="/intro" target="_blank">в путь</a>
+	</p>-->
+<!--части
+    <section id="chapter-menu">
+		<a class="chapters" href="/map">chp 1: map</a>
+		<a class="chapters" href="/portal">chp 2: portal</a>
+		<a class="chapters" href="/forest">chp 3: forest</a>
+		<a class="chapters" href="/water">chp 4: water</a>
+		<a class="chapters" href="/inhabitation">chp 5: inhabitation</a>
+		<a class="chapters" href="/miniscuity">chp 6: miniscuity</a>
+	</section>
+-->
+    <section id="index-text-container" class="text-blocks">
+		<template id="text-block">
+			<figure class="index-text-block">
+				<h3 class="title"></h3>
+				<div class="content"></div>
+				<figcaption class="description"></figcaption>
+				<p class="type"></p>
+			</figure>
+		</template>
+	
+			<figure class="index-text-block">
+				
+				<div class="content"><p class="p1">Привет, путник!
+                    Или просто, <em></em>человек</em>.</p>
+                </div>
+				
+
+			</figure>
+		
+			<figure class="index-text-block">
+				
+				<div class="content"><p class="p1">Ты попал в&nbsp;out*cene. Здесь вещи происходят сами-по-себе, а&nbsp;время течет медленно и&nbsp;бесцельно. Что если все, что тебя окружает, это живые массивы? Чтобы понять, выдохни. Попробуй начать мыслить вне&nbsp;головы.</p>
+            </div>
+				
+		</section>
+
+
+
+        <figure id="wateasdr">
+			<img class="image" src="https://64.media.tumblr.com/dfeed62df645e1e4e98bf9017d4462f2/64dacef358d68dcc-a7/s400x600/c7db0f4976bae210cd4a38558975d28ad46a777c.gifv">
+		</figure>
+
+        <figure id="water">
+			<img class="image" src="assets/la-collectionneuse-1967-dir-eric-rohmer.gif">
+		</figure>
+
+
+    <div class="nav-bar">
+		<p>nav:</p>
+		<p> <span id="nav-box"> &gt; </span> or "enter" is next</p>
+		<p> <span id="nav-box"></span> is a button </p>
+		<a> click <div id="index-nav-circle"></div> to return to landing page </a>
+	</div>
+
+
+    <!--старт-->
+
+    <figure id="tea">
+        <img class="image" src="assets/Без имени-2.jpg" title="@corporaltea: листиком чая">
+        
+    </figure>
+
+
+
+
+
+    <video src="web pathhhhh.mp4" style="opacity: 10%; " autoplay></video>
+
+
+
+<!--книшки
     
 
       <div id="Books">
@@ -94,14 +238,10 @@ ISBN 978-3-98501-072-1 (Softcover)</p>
           <p>2009</p>
           <div class="divider"></div>
 
-      </div> <!-- end of Books -->
-  
-  </div>
-  <div>
-    <img id="r1" src="sphereR40.gif" >
-    </div>
+      </div>  end of Books -->
 
-    <h1>прикол шрифтом IBM Plex</h1>
-    <p>а если ещё текстов написать</p>
   </body>
+
+ 
+
 </html> 

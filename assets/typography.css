@@ -1,0 +1,313 @@
+@font-face {
+    src: url(/font/IBMPlexSerif-Italic.ttf);
+    font-family: IBMPlexSerif-Italic;
+}
+
+@font-face {
+    src: url(/font/IBMPlexSerif-Regular.ttf);
+    font-family: IBMPlexSerif-Regular;
+}
+
+@font-face {
+    src: url(/font/IBMPlexSans-Regular.ttf);
+    font-family: IBMPlexSans-Regular;
+}
+
+
+
+
+
+
+
+
+
+
+#targetElement{
+	position: relative;
+	left: 3934px;
+	top: 2066px;
+}
+
+#teleport{
+	position: absolute;
+	top:100px;
+	left: 100px;
+}
+
+
+
+
+/** по-пап **/
+
+
+
+
+
+
+.Fpp-window {
+    font-family: 'IBMPlexSerif-italic';
+    display: none;
+    background: #fff;
+    position: fixed;
+	
+    z-index: 200;
+    height:max-content;
+	width: 400px;
+    margin: 70px auto 70px auto;
+    text-align: center;
+    overflow-y: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 80px;
+}
+.Fpp-window button {
+	position: absolute;
+	top: 0px;
+	right: 10px;
+}
+
+#Fpp-background {
+    display: none;
+    position: fixed;
+    z-index: 100;
+
+    overflow: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+/** раскид попапов **/
+#pop1{
+
+	position: absolute;
+	transform: translate(1520px, 820px);
+   }
+#pop2{
+	position: absolute;
+ 	transform: translate(1520px, 720px);
+}
+
+#pop3{
+	position: absolute;
+ 	transform: translate(1620px, 720px);
+}
+
+
+
+
+.navbar ul{
+	background-color: hsla(0, 0%, 100%, 0);
+
+		
+	width: 100%;
+	position: fixed;
+	display: flex;
+	justify-content: space-around;
+	align-items: flex-end;
+
+    padding-bottom: 0px;
+    margin: 0px;
+
+	
+
+}
+.navbar a{
+    color: black;
+    text-decoration: none;
+    padding: 5px;
+    display: block;
+    text-align: center;
+}
+.navbar a:hover{
+    background-color: hsl(205, 100%, 91%);
+}
+
+
+
+
+.poetry{
+    font-family: IBMPlexSans-Regular;
+    color: white;
+}
+
+.p1{
+    font-family: 'IBMPlexSerif-italic';
+	color: black;
+	transition: 0.5s;
+	filter: blur(4px);
+}
+
+p:hover{
+	transition: 0.5s;
+	filter: blur(0px);
+}
+
+#index-text-container{
+	position: absolute;
+    background-color: white;
+	border: 1px solid black;
+
+	border-radius: 10px;
+	width: 35vw;
+	margin: 50px 50px;
+    top: 70vh;
+    left: 60vw;
+	z-index: 1;
+}
+
+
+#intro-link{
+	display: block;
+	position: absolute;
+	border-radius: 7px;
+	background-color: rgba(119, 117, 117, 0.607);
+	color: white;
+	margin-left: auto;
+	margin-top: auto;
+	padding: 5px;
+	font-family:'monaspace_kryptonextralight';
+	font-size: small;
+	cursor: pointer;
+	z-index: 4;
+}
+.nav-bar{
+	position: fixed;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	width: 100vw;
+	font-family: "cmu_serifroman";
+	font-size: small;
+	align-items: center;
+	margin-left: 15vw;
+	margin-top: 90vh;
+    transition: 0.5s;
+    filter: blur(10px);
+
+}
+
+.nav-bar:hover{
+    transition: 0.5s;
+    filter: blur(0px);
+
+}
+
+
+/**#nav-box{
+	display: inline-block;
+	height: 3vh;
+	width: 5vw;
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 3px;
+}**/
+
+#chapter-menu{
+    display: none;
+}
+
+.chapters{
+	border: 1px solid black;
+    fill:antiquewhite;
+	border-radius: 8px;
+	padding: 5px;
+}
+#chapter-menu{
+	display: grid;
+	position: fixed;
+	grid-template-rows: 6fr;
+	gap: 20px;
+	font-family: 'cmu_serifroman';
+	font-size: small;
+	color: black;
+    fill:antiquewhite;
+	margin-left: 90vw;
+	text-align: left;
+	margin-top: 20px;
+	line-height: 10px;
+}
+
+@media screen and (max-width: 480px) {
+	.nav-bar{
+		display: none;
+	}
+
+	#index-title{
+		display: block;
+		position: fixed;
+		color: black;
+		font-family: 'monaspace_kryptonextralight';
+		font-size: x-large;
+		margin: 2vh 5vw;
+	}
+
+	#index-text-container{
+		position: absolute;
+		border: 1px solid black;
+		border-radius: 10px;
+		width: 94vw; 
+		margin: 25vh 3vw;
+	}
+	.index-text-block{
+		position: relative;
+		font-family: 'monaspace_kryptonextralight';
+		font-size: x-small;
+		z-index: 1;
+		padding: 2vh;
+		width: 95vw;
+	}
+
+	#chapter-menu{
+		display: none;
+	}
+
+	.index-info{
+		display: block;
+		position: absolute;
+		margin-top: 50px;
+	}
+	
+	#info-div{
+		display: grid;
+		position: absolute;
+		grid-template-columns: 1fr 3fr;
+		margin-left: 27vw;
+		margin-top: 70vh;
+		width: 70vw;
+		padding: 1vw;
+		font-family: 'cmu_serifroman';
+		font-size: xx-small;
+		text-align: right;
+		border: none;
+	}
+
+	#info-p{
+		text-align: right;
+	}
+	
+	#arena-link{
+		font-family: 'cmu_serifroman';
+		font-size: xx-small;
+		z-index: 3;
+		cursor: pointer;
+		text-decoration: underline;
+	}
+
+	#sound-menu{
+		display: none;
+	}
+
+	.index-mobile{
+		display: block;
+		position: absolute;
+		font-size: xx-small;
+		font-family:'cmu_serifroman';
+		color: rgb(73, 101, 128);
+		margin-left: 60vw;
+		text-align: left;
+		margin: 15vh 5vw;
+		width: 35vw;
+	}
+}
