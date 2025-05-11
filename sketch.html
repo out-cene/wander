@@ -1,34 +1,132 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>черновик</title>
+    <title>Рисование слов за мышью</title>
     <style>
-        
+        body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+textarea {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 1em;
+    width: 80%;
+
+    resize: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+canvas {
+    border: 2px solid black;
+    cursor: crosshair;
+}
+
     </style>
 </head>
 <body>
-
-<!--
-    <a href="javascript:scrollToElement('about')">about</a>
-    <a href="javascript:scrollToElement('coding')">coding</a>
-    <a href="javascript:scrollToElement('store')">store</a>
-
-    <div id="about"></div>
-    <div id="coding"></div>
-    <div id="store"></div>
+    <h1>Рисование слов за мышью</h1>
+    
+    <!-- Поле для ввода текста -->
+    <textarea id="textInput" rows="5" cols="50" placeholder="Вставь сюда текст">          Ты попал в out:cene. Здесь вещи происходят сами-по-себе, а время течет медленно и бесцельно. 
+        Что если все, что тебя окружает, это живые массивы? Чтобы понять, выдохни. Попробуй начать мыслить вне головы. </textarea>
+    
+    <canvas id="drawingCanvas"></canvas>
 
     <script>
-        function scrollToElement(elementId) {
-            var element = document.getElementById(elementId);
-            element.scrollIntoView({ behavior: 'smooth', 	block: 'center',
-            inline: 'center', });
-        }
+        // Получаем элементы
+const canvas = document.getElementById('drawingCanvas');
+const ctx = canvas.getContext('2d');
+const textInput = document.getElementById('textInput');
+
+// Устанавливаем размер канваса на весь экран
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+// Настройка шрифта и стиля
+ctx.font = "30px Arial";  // Шрифт и размер
+ctx.textAlign = "center"; // Выравнивание по центру
+ctx.textBaseline = "middle"; // Выравнивание по вертикали
+
+// Переменные для отслеживания состояния рисования
+let isDrawing = false;
+
+// Массив для хранения текущих слов, которые рисуются
+let drawnWords = [];
+
+// Функция для обновления массива слов из текста
+function updateWords() {
+    // Разбиваем текст на слова
+    const text = textInput.value.trim();
+    return text.split(/\s+/); // Разбиваем по пробелам (учитывая любые пробелы)
+}
+
+// Функция, которая начинается при нажатии мыши
+function startDrawing(e) {
+    isDrawing = true;
+}
+
+// Функция, которая выполняется, когда мышь двигается
+function draw(e) {
+    if (!isDrawing) return;
+
+    // Получаем массив слов из текстового поля
+    const words = updateWords();
+
+    if (words.length === 0) return; // Если нет слов для рисования, прекращаем рисовать
+
+    // Выбираем случайное слово из массива
+    const randomWord = words[Math.floor(Math.random() * words.length)];
+
+    // Случайная позиция для рисования
+    const randomX = e.clientX + Math.random() * 50 - 25;  // случайная корректировка позиции X
+    const randomY = e.clientY + Math.random() * 50 - 25;  // случайная корректировка позиции Y
+
+    // Добавляем слово в массив нарисованных слов
+    drawnWords.push({ word: randomWord, x: randomX, y: randomY });
+
+    // Рисуем слово
+    ctx.fillText(randomWord, randomX, randomY);
+}
+
+// Функция, которая завершает рисование
+function stopDrawing() {
+    isDrawing = false;
+}
+
+// Добавляем обработчики событий
+canvas.addEventListener('mousedown', startDrawing); // Когда мышь нажата
+canvas.addEventListener('mousemove', draw);         // Когда мышь двигается
+canvas.addEventListener('mouseup', stopDrawing);    // Когда кнопка мыши отпущена
+canvas.addEventListener('mouseout', stopDrawing);   // Когда мышь выходит за пределы канваса
+
+// Функция для перерисовки всех слов на канвасе
+function redrawWords() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height); // Очищаем канвас
+
+    // Перерисовываем все слова
+    drawnWords.forEach(wordData => {
+        ctx.fillText(wordData.word, wordData.x, wordData.y);
+    });
+}
+
+// Опционально: для анимации можно обновлять слова с перерисовкой каждую секунду
+setInterval(redrawWords, 100);
+
     </script>
--->
-
-
-
 </body>
 </html>
