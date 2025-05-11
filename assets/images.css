@@ -1,9 +1,9 @@
 body{
     background-image: url("");
-    background-color: lightgray;
+    background-color:#fffffa;
     background-repeat: no-repeat;
     background-position:absolute ;
-    background-size: 7680px, 5760px;
+    background-size: 8900px, 5760px;
     font-size: 16px;
     line-height: 18px;
 
@@ -23,41 +23,13 @@ https://d2w9rnfcy7mm78.cloudfront.net/28726595/original_314b7bf8fb5fd51460da9fcd
 
 
 
-#answ1{
-    position: absolute;
-    left: 100px;
-    top: 300px;
-    filter: drop-shadow(20px);
-}
 
 
 
-#water{
-    position: absolute;
-    left: 7500px;
-    top: 4800px;
-    filter: blur(4px)contrast(200%)saturate(100%) ;
-    right: 100px;
-    min-width: 100%;
-    scale: 300%;
-    opacity: 100%;
-    
-
-}
-
-#tea{
-    position: absolute;
-    left: 3968px;
-    top: 2350px;
-    filter: contrast(200%)saturate(0%);
-    right: 100px;
-    min-width: 100%;
-    scale: 20%;
-
-    opacity: 50%;
 
 
-}
+
+
   .image-block{
 	position: fixed;
 	transform: scale(0.5);
@@ -87,29 +59,3 @@ https://d2w9rnfcy7mm78.cloudfront.net/28726595/original_314b7bf8fb5fd51460da9fcd
 }
 
 
-@media screen and (max-width: 480px) {
-    .cursor-follow{
-        display: none;
-    }
-    .index-image-block{
-        display: block;
-        position: absolute;
-        margin-left: 150vw;
-        margin-right: -45vw;
-        margin-top: -10vh;
-        scale: 130%;
-        transform: rotate(-50deg);
-    }
-    .circle-section{
-        display: none;
-    }
-    .index-body{
-        position: inherit;
-        height: 80vh;
-        overflow-y: scroll;
-        cursor: default;
-    }
-    .line-1, .line-2, .line-3{
-        display: none;
-    }
-}
