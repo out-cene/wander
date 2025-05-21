@@ -10,6 +10,8 @@
         <title>out*cene_wander</title>
         <link href="assets/favicon.png" rel="icon">
         <script src="assets/slay.js" type="text/javascript"></script>
+<!--      <script src="assets/mysketch.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>>-->  
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -22,11 +24,35 @@
   <body>
     <div style="position: absolute; top: 0px; left: 0px; width: 7680px; height: 7680px;">
     </div>
+
+<!-- Анти-CAPTCHA экран -->
+  <div id="captcha-screen">
+    <div class="captcha-box">
+      <input type="checkbox" id="not-human" onclick="confirmNotHuman()">
+      <label for="not-human" class="captcha-label">Подтвердите, что вы не человек</label>
+      <div class="fake-logo">
+        <div></div>
+      </div>
+    </div>
+  </div>
+
+   <div id="main-site">
+
     <!--навигация-->
     <div>
-      <div id="about">hi!</div>
-      <div id="coding"></div>
-      <div id="store"></div>
+      <div id="manifesto"></div>
+      <div id="about"></div>
+      <div id="writing">*здесь ты можешь найти, что почитать</div>
+      <div id="coding"><a href="creativecode.html">> creative coding</a> </div>
+      <div id="store">
+        <div id="shop_container">
+          <div id="item1"><a href="ссылка" title="глянуть итем 1"><img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGd5eHR2cmxmdnp1M2lldnQ2cWJkYnZiaXM1cmlzaGsxMmp5bzZrMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/5vzVErjVBgUda/giphy.gif" alt=""></a></div>
+          <div id="item2"><a href="ссылка2" title="глянуть итем 2"><img src="assets\bag.png" alt=""></a></div>
+          <div id="item3"><a href="ссылка3" title="глянуть итем 2"><img src="assets\открытка а6.png" alt=""></a></div>
+          <div id="item4"><a href="ссылка4" title="глянуть итем 2"><img src="assets\stickers.png" alt=""></a></div>
+          <div id="item5"><a href="ссылка5" title="глянуть итем 2"><img src="assets\сумка.png" alt=""></a></div>
+        </div>
+      </div>
 
       <script>
           function scrollToElement(elementId) {
@@ -38,9 +64,11 @@
 
       <nav class="navbar">
           <ul>
-            <a href="javascript:scrollToElement('about')">about</a>
-            <a href="javascript:scrollToElement('coding')">coding</a>
-            <a href="javascript:scrollToElement('store')">store</a>
+            <a href="javascript:scrollToElement('manifesto')">о нас</a>
+            <a href="javascript:scrollToElement('about')">начать</a>
+            <a href="javascript:scrollToElement('writing')">библиотека</a>
+            <a href="javascript:scrollToElement('coding')">кодинг</a>
+            <a href="javascript:scrollToElement('store')">магазин</a>
           </ul>
       </nav>
   </div>
@@ -57,19 +85,19 @@
 				<div class="content"><p>Привет, путник!
           Или просто, человек.
           
-          Ты попал в out:cene. Здесь вещи происходят сами-по-себе, а время течет медленно и бесцельно. 
+          Ты попал в out:cene. Здесь вещи происходят сами-по-себе, а время течет медленно и бесцельно. 
           Что если все, что тебя окружает, это живые массивы? Чтобы понять, выдохни. Попробуй начать мыслить вне головы.  </p></div>
-
-				
 			</figure>
 
 		</section>
 
 
-    <div class="content" id="narr2"><p>Это сайт, в котором ты можешь побродить в среде нечеловеческих существ</p></div>
 
 
-
+  <!--<div id="t1"><p>начни как человек, который пытается найти черты себе подобного в живых организмах (парейдолия) </p>  </div>
+    <div id="t2"><p>увидь мир</p></div>
+    <div id="t3"><p>зрением моллюска</p></div>-->
+    
 <!--текст-о-нас
 <section id="index-text-container" class="text-blocks">
   <template id="text-block">
@@ -90,7 +118,7 @@
 </section>
 id start
         начни как человек, который пытается найти черты себе подобного в живых организмах (парейдолия)
-        увидь мир с позиции зрения моллюска
+        увидь мир зрением моллюска
         от млекопитающего - до одноклеточного, амебки
         
         затем, прояви эмпатию к растениям.
@@ -108,6 +136,73 @@ id start
         до-
 
 -->
+
+<pre id="manifest">(manifest)</pre>
+<pre id="manifest1">потерянность - результат
+overwhelmed разума
+от экзистенциальной догмы,
+что есть западный трактат.
+
+принятый за истину,
+единственно верную.
+в чем смысл "..."?
+уже не важно, в общем-то.
+
+посмотрим направо,
+стоя лицом к северу.
+не в чем смысл, а как.
+существование, являющееся
+со-существованием
+
+мир - тьма вещей
+и мы - есть вещи
+с чего-то решившие,
+что главнее других
+
+и несрубленное древо
+расскажет человеку
+о бесполезности.
+(откуда оно говорит?..)
+
+все польза, все удобство.
+а с бесполезным и диким
+берешь и пере-чувствоваешь
+любое, на что смотришь
+</pre>
+
+<pre id="manifest2">
+стих, где нет ни рифмы,
+ни размера.
+вот это удобство
+автор - кто начнет писать.
+
+отделить мысль 
+в количество строк.
+вербальное в фрейме
+на привычную строфу
+
+verbal / non-verbal:
+режиссеру - видео
+художнику - плоскость
+инсталлятору - объекты и техника
+далее... - ...далее
+отправитель - формат
+
+невысказанное поместить
+в неговорящее словом
+
+определить уровень
+определенности:
+количество смысла в минуту,
+ускорить или замедлить
+получателя.
+
+сейчас лучше замедлить -
+ускоряется всё вокруг.
+может, дискомфортно  и без перемотки.
+как старый интернет
+  
+</pre>
 <!--поп-ап-->
     <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
     <script type="text/javascript">
@@ -121,6 +216,9 @@ id start
              }
         document.getElementById('Fpp-background').style.display = state;
         }
+
+
+      
         
     </script>   
     <div onclick="show('none')" id="Fpp-background"></div>
@@ -144,193 +242,370 @@ id start
     </a>
     
     <div id="popup3" class="Fpp-window">
-        <p>As I learned from the poet-philosopher John O’Donohue the word beauty partly derives from the Celtic word ‘kalon’ and ‘kalein’, which means ‘to call, to be called’. So when I talk about beauty, what I mean is that moment of calling — for example when you stand in a vast landscape and you feel fully alive and at one with the world, you are ‘called into being’. I would hope we are all able to feel that as often as possible in our lives. For me something is beautiful if it conjures up that awe in you.</p>
+        <p>
+          Я чувствую себя в совершенстве в том, что  я связан, неотделим и являюсь частью мира. Меня утешает то, что я являюсь экосистемой, мимолетным, высокодифференцированным сообществом клеток, минералов, организмов и энергии.
+        </p>
         <button onclick="show('none', 'popup3')"> << </button>
       </div>
       <a href="#open" onclick="show('block', 'popup3')"><!--Открыть-->
-        <p class="p1" id="pop3">beauty</p>
+        <p class="p1" id="pop3">отдельно?</p>
       </a>
 
+          <div id="popup4" class="Fpp-window">
+        <p>По мнению Дейзи Хилдьярд,<br>
+у каждого человека есть два тела.<br>
+Ваше первое тело - это тело, в котором вы живете в повседневной жизни.<br>
+Это тело, которое спит и ест, думает и двигается.<br>
+Но у вашего первого тела есть еще одно сверхъестественное свойство: второе тело.<br><br>
+
+“Вы живы и в том, и в другом. У вас два тела” (Хилдьярд, 25 лет).<br><br>
+
+Ваше второе тело облетает земной шар.<br>
+И парит за окнами.<br>
+Ваше тело "просачивается" через границы<br>
+и выходит за пределы кожи<br>
+Даже из карантина,<br>
+Вы “сходитесь с другими телами, человеческими и нечеловеческими”.
+</p>
+        <button onclick="show('none', 'popup4')"> << </button>
+      </div>
+      <a href="#open" onclick="show('block', 'popup4')"><!--Открыть-->
+        <p class="p1" id="pop4">два тела</p>
+      </a>
+
+    <div id="popup5" class="Fpp-window">
+        <p>Грязь нарушает границы, классификацию и&nbsp;прогресс. Она любит перемешивание и&nbsp;горизонтальность. Из-за нее тяжелые предметы тонут. Из-за нее вертикальные конструкции скользят. На илистой почве очень трудно возводить вертикальные конструкции, они не&nbsp;устоят. <br><br>Грязь тоже может привести к&nbsp;замедлению движения. “Внезапно мои ноги становятся ватными, все происходит как в&nbsp;замедленной съемке”, - поет Кейт Буш в&nbsp;своей песне “Suspended in Gaffa”. Когда кто-то “завален” дедлайнами, он&nbsp;подавлен и&nbsp;изо всех сил пытается эффективно продвигаться вперед. <br><br>Когда ситуация превращается в&nbsp;“трясину”, все запутывается и&nbsp;выбраться из нее трудно. Когда все “увязает” в бюрократии, прогресс тормозится. Когда играешь в “застрявшего в грязи”, застревание в грязи означает, что ты не можешь двигаться вперед. <br><br>Но в грязи можно не только застрять. Как узнали игроки в регби в Уэльсе, это еще и смазка, проскальзывание и быстрые, непредсказуемые движения. Грязь - это слизистая субстанция, и, по словам Ви Барратт из VNS Matrix (австралийского киберфеминистского сообщества, называющего себя “торговцами слизью”, которые “выползли из кибербольницы” еще в 1991 году), “слизь проникает внутрь”. Она проникает через узкие отверстия и заполняет промежутки между.</p>
+        <button onclick="show('none', 'popup5')"> << </button>
+      </div>
+      <a href="#open" onclick="show('block', 'popup5')"><!--Открыть-->
+        <p class="p1" id="pop5">грязь</p>
+      </a>
+
+    <div id="popup6" class="Fpp-window">
+        <p>
+Это, пожалуй, самая неприятная особенность систем: цель не обязательно может быть выведена из элементов.<br><br>Капля дождя не означает, что она играет центральную роль в терморегуляции климата или в испарении, необходимом для роста растений. <br><br>Эту систему мы должны воспринимать интуитивно, находясь за пределами капли дождя.        </p>
+        <button onclick="show('none', 'popup6')"> << </button>
+      </div>
+      <a href="#open" onclick="show('block', 'popup6')"><!--Открыть-->
+        <p class="p1" id="pop6">цель?</p>
+      </a>      
+
+    <div id="popup7" class="Fpp-window">
+        <p>
+Как я узнал от поэта-философа Джона О'Донохью, слово "красота" частично происходит от&nbsp;кельтских слов "kalon" и "kalein", что означает "призывать, быть призванным’. <br><br>Поэтому, когда я говорю о красоте, я имею в виду момент призвания — например, когда вы&nbsp;стоите посреди огромного пейзажа и чувствуете себя полностью живым и единым с&nbsp;миром, вы&nbsp;"призваны к существованию’. <br><br>Я бы хотел, чтобы мы все могли чувствовать это как можно чаще в своей жизни. Для меня что-то прекрасно, если оно вызывает в вас благоговейный трепет.
+</p>
+        <button onclick="show('none', 'popup7')"> << </button>
+      </div>
+      <a href="#open" onclick="show('block', 'popup7')"><!--Открыть-->
+        <p class="p1" id="pop7">красота</p>
+      </a>       
+
+    <div id="popup8" class="Fpp-window">
+        <p>
+Я начал считать вкладки, регулировать яркость экрана, поддерживать активность в разговорах только в том случае, если они казались мне важными. <br><br>Использование технологии условного энергопотребления привело к диалогу между мной и солнцем там, где когда-то существовала однонаправленная модель потребления. 
+<br><br>Я чувствовал себя так, словно впервые взял в&nbsp;руки свой телефон, и относился к&nbsp;его мощности с&nbsp;уважением.
+</p>
+        <button onclick="show('none', 'popup8')"> << </button>
+      </div>
+      <a href="#open" onclick="show('block', 'popup8')"><!--Открыть-->
+        <p class="p1" id="pop8">перерыв от экрана</p>
+      </a>        
+      
+    <div id="popup9" class="Fpp-window">
+        <p>
+Программирование (in situ) - это не только изучение окружающей среды перед написанием кода. Это также создание чего-то осмысленного — чего-то, что не скрывается за гладкой поверхностью. <br><br>Кодинг на месте означает создание чего-то, что повышает уровень автономии тех, кого это касается, и позволяет им чувствовать базовую инфраструктуру.
+</p>
+        <button onclick="show('none', 'popup9')"> << </button>
+      </div>
+      <a href="#open" onclick="show('block', 'popup9')"><!--Открыть-->
+        <p class="p1" id="pop9">кодинг (в моменте)</p>
+      </a> 
+
+    <div id="popup10" class="Fpp-window">
+        <p>
+Цифровой сад - это основа для размышлений о&nbsp;том, как можно спроектировать онлайн-пространство на основе представления садов. Здесь ценности, плюрализм, взаимозависимость, устойчивость, адаптация и открытия сосредоточены в процессе проектирования техносоциальных пространств. <br><br>
+
+Сад состоит из следующих частей:<br>
+<li>"Семена": контент, предоставляемый садоводами,
+такой как текст, фотографии, видео, аудио или другие цифровые носители.</li>
+<li>Садоводы: пользователи, которые вкладывают средства в уход за садом и его выращивание.</li>
+<li>Почва: основа, то есть система проектирования и процессы, на которых основан сад.</li>
+<li>Элементы для роста (такие как вода, солнечный свет и благополучие садоводов): дизайнерские ценности, которыми руководствуется этот сад.</li></p>
+        <button onclick="show('none', 'popup10')"> << </button>
+      </div>
+      <a href="#open" onclick="show('block', 'popup10')"><!--Открыть-->
+        <p class="p1" id="pop10">цифровой сад</p>
+      </a> 
+
+    <div id="popup11" class="Fpp-window">
+        <p>
+Такая множественность или идея о том, что мы изначально никогда не были полностью людьми, была мне действительно интересна, но также и этот расширяющий или открывающий аспект этого.</p>
+        <button onclick="show('none', 'popup11')"> << </button>
+      </div>
+      <a href="#open" onclick="show('block', 'popup11')"><!--Открыть-->
+        <p class="p1" id="pop11">только ли человек</p>
+      </a> 
+
+ <!-- Исходный элемент, скрытый -->
+  <pre class="are" style="display: none;">  _________
+;          
+[         :
+:         :
+:         ;
+_________ [</pre>
+
+<pre class="are" style="display: none;">~*</pre>
+<pre class="are" style="display: none;">?;"~.</pre>
+<pre class="are" style="display: none;">   .
+     ” ..   .  
+ .   ~:  ‘ .  ‘
+    ‘          “.
+               ‘</pre>
+<pre class="are" style="display: none;">
+     .
+     ” ..   .  
+ .   ~:  ‘ .  ‘    ‘          .               ” .:  ‘ .  ‘
+    ‘   “       “..   .  
+ .   ~” .           .   .  
+ .   
+                  ~:  ‘ .
+               ‘
+</pre>
+
+
+<pre class="are" style="display: none;">_
+   |
+    \ ; |                                | : ; ---- ; **/ ; ;
+;
+\
+”
+  )
+   |
+    \ ~ ---- ; ~ ; -! ; ~ -! ; \
+  \ 
+      +
+         \
+          \
+            -\
+               @ ~ ; ; ~ _
+   |
+    \ : : * ---- ; **/ :
+               ; ; ~ ; ~ : -
+! 
+;
+ 
+; ; : ; ---- : (
+            ( - )) |                               
+                         | ; ; ; ~ !~ ; !~ ;
+;
+\
+”               -@
+  
+   |
+    \ /** : ; ; ---- // // ; ; \
+  \
+    \ ---- : |                                | : ; ; ; {
+
+;
+;
+‘”
+} ---- (( - )) ‘”
+
+
+;
+;
+ \
+  \ 
+
+      \
+       \
+         -\
+         @ </pre>
+ 
 
 
 
 
 
-<!--ответы -->    
-  <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjM5dmFlM2RpdmFmYWE2aHlxd2ZpNnQ4M282bGIwcGw0eWt3ZGVwcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/3RhWyz7qaJxvfl1TIa/giphy.gif" id="an1" alt="сияющая сфера 40см в диаметре"title="сияющей сферой 40см в диаметре">
+
+      
+
+<!--ответы --> 
+
+  <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjM5dmFlM2RpdmFmYWE2aHlxd2ZpNnQ4M282bGIwcGw0eWt3ZGVwcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/3RhWyz7qaJxvfl1TIa/giphy.gif" id="an1" alt="сияющая сфера 40см в диаметре"title="@1 сияющей сферой 40см в диаметре">
   <figure id="an2">
-    <img class="image" src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeno2d3l3MXBkcTBhaHlyYnl0azk4dHRpbm92MzJoc2Z0emFpY3E4diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xTiQyHLKIbgWIPIhZC/giphy.gif" title="@corporaltea: листиком чая">
+    <img class="image" src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeno2d3l3MXBkcTBhaHlyYnl0azk4dHRpbm92MzJoc2Z0emFpY3E4diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xTiQyHLKIbgWIPIhZC/giphy.gif" title="@2 листиком чая">
   </figure>
   <figure id="an3">
-    <img class="image" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGI0bjBlYzFhc2htOWJnMHNkaXR5ZnJycW5naTl2aGUwb2c5eDlhbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/ekRzExVYVPtHOaD9vA/giphy.gif" title="@ волей к жизни">
+    <img class="image" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGI0bjBlYzFhc2htOWJnMHNkaXR5ZnJycW5naTl2aGUwb2c5eDlhbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/ekRzExVYVPtHOaD9vA/giphy.gif" title="@3 волей к жизни">
   </figure>
   <figure id="an4">
-    <img class="image" src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHI3d2RucGxxcmxsbW1tN2x2YnhxdDM0MmJmMjR1N3E5MW1lN29lciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/Qw1FB7s3le3hv5pc8E/giphy.gif" title="столетним древом">
+    <img class="image" src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHI3d2RucGxxcmxsbW1tN2x2YnhxdDM0MmJmMjR1N3E5MW1lN29lciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/Qw1FB7s3le3hv5pc8E/giphy.gif" title="@4 столетним древом">
   </figure>
   <figure id="an5">
-    <img class="image" src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbHBrZG1mZ2Zkamt2ZDZucm9hZDdsd2E0aDY0d2pqOWYyZ3V6MnhybCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/iI7iIaa0WhBRebnE3e/giphy.gif" title="@флюгером">
+    <img class="image" src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbHBrZG1mZ2Zkamt2ZDZucm9hZDdsd2E0aDY0d2pqOWYyZ3V6MnhybCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/iI7iIaa0WhBRebnE3e/giphy.gif" title="@5 флюгером">
   </figure>
   <figure id="an6">
-    <img class="image" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXllb2x0Y253eDkzcDF2cnFtcWNzODJoMDdyaGF0anUxcTBlcXB5ciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/K2S4BHPUZ19XiytxhU/giphy.gif" title="@камушком в теплом солёном море">
+    <img class="image" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXllb2x0Y253eDkzcDF2cnFtcWNzODJoMDdyaGF0anUxcTBlcXB5ciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/K2S4BHPUZ19XiytxhU/giphy.gif" title="@6 камушком в теплом солёном море">
   </figure>
   <figure id="an7">
-    <img class="image" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWg2MzNsOTN5YzVudTFscGJhM3htdnhkZ3Nyb2sxb2U5OGJjb3BxYiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/k3CeSrt9IZ6aorWCy1/giphy.gif" title="@ветром или волной">
+    <img class="image" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWg2MzNsOTN5YzVudTFscGJhM3htdnhkZ3Nyb2sxb2U5OGJjb3BxYiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/k3CeSrt9IZ6aorWCy1/giphy.gif" title="@7 ветром или волной">
   </figure>
   <figure id="an8">
-    <img class="image" src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExczk0bnplMDl5aXFvZ2xreDBkMXlzZm03dDBhdzkwMHVtamlkcW5zZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3og0IEX4WDuOggvpS0/giphy.gif" title="я бы была легким немного холодным утренним ветром ">
+    <img class="image" src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExczk0bnplMDl5aXFvZ2xreDBkMXlzZm03dDBhdzkwMHVtamlkcW5zZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3og0IEX4WDuOggvpS0/giphy.gif" title="@8 я бы была легким немного холодным утренним ветром ">
   </figure>
   <figure id="an9">
-    <img class="image" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcXQxeWdlbTFmNTNhMnIwdGppZHYxZ29uMXFveDZzcnZ0MzQzY2ZhYiZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/L07Hl2oHRHOqijFME7/giphy.gif" title="Я была бы молекулой H₂O — текучей, изменчивой, перетекающей из одного агрегатного состояния в другое. Лёд, пар, вода — разная, но одна по сути.">
+    <img class="image" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcXQxeWdlbTFmNTNhMnIwdGppZHYxZ29uMXFveDZzcnZ0MzQzY2ZhYiZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/L07Hl2oHRHOqijFME7/giphy.gif" title="@9 Я была бы молекулой H₂O — текучей, изменчивой, перетекающей из одного агрегатного состояния в другое. Лёд, пар, вода — разная, но одна по сути.">
   </figure>
   <figure id="an10">
-    <img class="image" src="assets/деревенский дом.jpg" title="Хотелось бы быть запахом старого деревянного деревенского дома, где раньше жили старые люди. Иногда проходят мимо бабушки в деревне, и этот запах похож на медикаменты, и пыль, и может сажа. Это не какой-то физический запах тела, а очень специфический запах старой окружающей среды. Я живу в таком доме, и каждый раз, стоит мне уехать в город на день, по возвращению он встречает меня. К нему быстро привыкаешь, и через минут 10 его уже нет, но он есть и, возможно, слышен и от меня. Он лишает тебя городского мира, твое одинокое местонахождение в старом доме вдали от людей теперь главная твоя характеристика, как маркер совершенно отличной жизни с другими желаниями и вещами, но при этом есть в этом запахе что-то угрожающее для остальных людей.
+    <img class="image" src="assets/деревенский дом.jpg" title="@10 Хотелось бы быть запахом старого деревянного деревенского дома, где раньше жили старые люди. Иногда проходят мимо бабушки в деревне, и этот запах похож на медикаменты, и пыль, и может сажа. Это не какой-то физический запах тела, а очень специфический запах старой окружающей среды. Я живу в таком доме, и каждый раз, стоит мне уехать в город на день, по возвращению он встречает меня. К нему быстро привыкаешь, и через минут 10 его уже нет, но он есть и, возможно, слышен и от меня. Он лишает тебя городского мира, твое одинокое местонахождение в старом доме вдали от людей теперь главная твоя характеристика, как маркер совершенно отличной жизни с другими желаниями и вещами, но при этом есть в этом запахе что-то угрожающее для остальных людей.
     ">
   </figure>
 
 
   <figure id="an11">
-    <img class="image" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGgxdnlpM2g4aWlxYnQ2MWR1MTltY20wbG13dTAwOTg5aDNjd3d4MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/TLiUhfPABzIJ3XovNX/giphy.gif" title="Цветком, возможно даже живым как животное. Вроде Флауи из Undertale">
+    <img class="image" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGgxdnlpM2g4aWlxYnQ2MWR1MTltY20wbG13dTAwOTg5aDNjd3d4MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/TLiUhfPABzIJ3XovNX/giphy.gif" title="@11 Цветком, возможно даже живым как животное. Вроде Флауи из Undertale">
   </figure>
   <figure id="an12">
-    <img class="image" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGd5eHR2cmxmdnp1M2lldnQ2cWJkYnZiaXM1cmlzaGsxMmp5bzZrMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/5vzVErjVBgUda/giphy.gif" title="лимоном">
+    <img class="image" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGd5eHR2cmxmdnp1M2lldnQ2cWJkYnZiaXM1cmlzaGsxMmp5bzZrMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/5vzVErjVBgUda/giphy.gif" title="@12 лимоном">
   </figure>
   <figure id="an13">
-    <img class="image" src="https://media.giphy.com/media/4EFrMPSlWFl03YaYUv/giphy.gif" title="Энергетическим пучком света. Расходящимся и сходящимся, всепроникающим, согревающим. ">
+    <img class="image" src="https://media.giphy.com/media/4EFrMPSlWFl03YaYUv/giphy.gif" title="@13 Энергетическим пучком света. Расходящимся и сходящимся, всепроникающим, согревающим.">
   </figure>
   <figure id="an14">
-    <img class="image" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3FsbjhhenNxam56ZjlqdXRqcng1dTRjY2tuMXo3amV5dWc0Z3BwciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l3q2BblkeSUFEOg3S/giphy.gif" title="Рекой">
+    <img class="image" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3FsbjhhenNxam56ZjlqdXRqcng1dTRjY2tuMXo3amV5dWc0Z3BwciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l3q2BblkeSUFEOg3S/giphy.gif" title="@14 Рекой">
   </figure>
   <figure id="an15">
-    <img class="image" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExanBpcWgzcTZhejh3ajZsZGNybGtkcml5MWNvZGV2OTRsenQ5YTU0NiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/k3CeSrt9IZ6aorWCy1/giphy.gif" title="Ветром">
+    <img class="image" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExanBpcWgzcTZhejh3ajZsZGNybGtkcml5MWNvZGV2OTRsenQ5YTU0NiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/k3CeSrt9IZ6aorWCy1/giphy.gif" title="@15 Ветром">
   </figure>
   <figure id="an16">
-    <img class="image" src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjRsaGVwZXNpN3k1NjRldzZ2MGl6NGM4Z2R0dnk4b3lkdDM2OWwyaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/68XOOuE0KWeIrJoRgO/giphy.gif" title="Деревом1">
+    <img class="image" src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjRsaGVwZXNpN3k1NjRldzZ2MGl6NGM4Z2R0dnk4b3lkdDM2OWwyaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/68XOOuE0KWeIrJoRgO/giphy.gif" title="@16 Деревом1">
   </figure>
   <figure id="an17">
-    <img class="image" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXYwNHpiaWp5ZjA1OHF1bnpremx2NGJ0bDhsdnNlZTBiZHhvenhycyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/wa8uMtV7bmdGTGGmD7/giphy.gif" title="Биосферой">
+    <img class="image" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXYwNHpiaWp5ZjA1OHF1bnpremx2NGJ0bDhsdnNlZTBiZHhvenhycyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/wa8uMtV7bmdGTGGmD7/giphy.gif" title="@17 Биосферой">
   </figure>
   <figure id="an18">
-    <img class="image" src="https://media.giphy.com/media/Nj8b4AlbRUihG/giphy.gif?cid=ecf05e4768q9voqeuz4epm0ey9yit0b2ckpnengbptd5gxjp&ep=v1_gifs_related&rid=giphy.gif&ct=g" title="Я думаю, что я бы мог быть отличной океанской волной.">
+    <img class="image" src="https://media.giphy.com/media/Nj8b4AlbRUihG/giphy.gif?cid=ecf05e4768q9voqeuz4epm0ey9yit0b2ckpnengbptd5gxjp&ep=v1_gifs_related&rid=giphy.gif&ct=g" title="@18 Я думаю, что я бы мог быть отличной океанской волной.">
   </figure>
   <figure id="an19">
-    <img class="image" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmZhNTlzdGtzcWFwbTNkc2NvNHcwb3VqaG8xZ3NidXhkbTN5OXlzYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l1J9NypzsiRA2L7mE/giphy.gif" title="Водой">
+    <img class="image" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmZhNTlzdGtzcWFwbTNkc2NvNHcwb3VqaG8xZ3NidXhkbTN5OXlzYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l1J9NypzsiRA2L7mE/giphy.gif" title="@19 Водой">
   </figure>
   <figure id="an20">
-    <img class="image" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3h1eHZwdmM2czJnNjA5ZG1ydXpidTVrY200dXc2Mm85azhhM2NyOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/0IGRygDt5cMP2Q0Jmu/giphy.gif" title="Ветер">
+    <img class="image" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3h1eHZwdmM2czJnNjA5ZG1ydXpidTVrY200dXc2Mm85azhhM2NyOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/0IGRygDt5cMP2Q0Jmu/giphy.gif" title="@20 Ветер">
   </figure>
 
 
   <figure id="an21">
-    <img class="image" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2F5amx4NmQ2c2lsejM5dXJ0M3RoaXg4YzF0YTJjamdydDJzOWpqYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/VCC8uIyMWQ7tAdZ4Ge/giphy.gif" title="пустотой">
+    <img class="image" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2F5amx4NmQ2c2lsejM5dXJ0M3RoaXg4YzF0YTJjamdydDJzOWpqYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/VCC8uIyMWQ7tAdZ4Ge/giphy.gif" title="@21 пустотой">
   </figure>
   <figure id="an22">
-    <img class="image" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGZyYzY2cTV4aDFrNzRzaDdqaTl5ODAwMmw3MTI5am44b216cGI1eiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Ki0HON1yoMyVMr58GB/giphy.gif" title="Океаном">
+    <img class="image" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGZyYzY2cTV4aDFrNzRzaDdqaTl5ODAwMmw3MTI5am44b216cGI1eiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Ki0HON1yoMyVMr58GB/giphy.gif" title="22. Океаном">
   </figure>
   <figure id="an23">
-    <img class="image" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzR3Z3BiMWw4eHZ2YWVlbW0zZTIxeWxkNGprbXFtZ2RvOWtlaGR0ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tC31uX71PvzHekonwc/giphy.gif" title="Меня бы не было. Вне животных нет агентности, только процессы более простых итераций.">
+    <img class="image" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzR3Z3BiMWw4eHZ2YWVlbW0zZTIxeWxkNGprbXFtZ2RvOWtlaGR0ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tC31uX71PvzHekonwc/giphy.gif" title="23. Меня бы не было. Вне животных нет агентности, только процессы более простых итераций.">
   </figure>
   <figure id="an24">
-    <img class="image" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjYwdXVhc2Job3lubGliMzByb2lqcnV2cjJoeDVyZDNoYzcxNDRmYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26n6G8lRMOrYC6rFS/giphy.gif" title="звездной пылью,  каплями метана, водной пылью, карбидом в ядре планеты ">
-  </figure>
+    <img class="image" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjYwdXVhc2Job3lubGliMzByb2lqcnV2cjJoeDVyZDNoYzcxNDRmYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26n6G8lRMOrYC6rFS/giphy.gif" title="24. звездной пылью,  каплями метана, водной пылью, карбидом в ядре планеты ">
+  </figure>    
   <figure id="an25">
-    <img class="image" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWN1aTR4bDZhMGoyeXRibGlzenp4Y3R2dWw2MXd2cWppeGh0dnd3eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/39wBNYC96wVjjBThrp/giphy.gif" title="Деревом2">
+    <img class="image" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWN1aTR4bDZhMGoyeXRibGlzenp4Y3R2dWw2MXd2cWppeGh0dnd3eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/39wBNYC96wVjjBThrp/giphy.gif" title="25. Деревом">
   </figure>
   <figure id="an26">
-    <img class="image" src="https://d2w9rnfcy7mm78.cloudfront.net/10184485/original_31c59fcf4db47d3a0da02e6d3e528533.gif?1610333723?bc=0" title="горой">
+    <img class="image" src="https://d2w9rnfcy7mm78.cloudfront.net/10184485/original_31c59fcf4db47d3a0da02e6d3e528533.gif?1610333723?bc=0" title="26. горой">
   </figure>
   <figure id="an27">
-    <img class="image" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWlqdGc4cGdyN3Y0cDJuMmtodXByaGt5am1jOXliY3BrZGM1cm10ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/11HIWMjQxkIpm8/giphy.gif" title="Нефтью ">
+    <img class="image" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWlqdGc4cGdyN3Y0cDJuMmtodXByaGt5am1jOXliY3BrZGM1cm10ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/11HIWMjQxkIpm8/giphy.gif" title="27. Нефтью ">
   </figure>
   <figure id="an28">
-    <img class="image" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWFnY205a294a3ZneXZ0Mmx0ZHY1cmR4OXd0MzQ0dzM5cHc1OXpsdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o7TKPk9j8SRYMmFdC/giphy.gif" title="Светом, то есть пучком света, отражающимся в различных поверхностях. Свет как единственное, что стоит в основе нашей визуальности, нашего оптического ощущения окружающего мира.">
+    <img class="image" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWFnY205a294a3ZneXZ0Mmx0ZHY1cmR4OXd0MzQ0dzM5cHc1OXpsdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o7TKPk9j8SRYMmFdC/giphy.gif" title="28. Светом, то есть пучком света, отражающимся в различных поверхностях. Свет как единственное, что стоит в основе нашей визуальности, нашего оптического ощущения окружающего мира.">
   </figure>
   <figure id="an29">
-    <img class="image" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2lieGlhY2kxZGx0OHQ5Y2lwbTljdjZvMGgxZXBycmNtajU0N21vdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/RLVWIZaro47yqbst0t/giphy.gif" title="Автобусом">
+    <img class="image" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2lieGlhY2kxZGx0OHQ5Y2lwbTljdjZvMGgxZXBycmNtajU0N21vdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/RLVWIZaro47yqbst0t/giphy.gif" title="29. Автобусом">
   </figure>
   <figure id="an30">
-    <img class="image" src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExemR4aGY3MjNkd3RvYjJzdDhxdzA4MnBtZGcxcHd0M2pyemdpYjBpYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/pxfmi3rjxYQvQUuazB/giphy.gif" title="никем. начиная с 2022 года, неосознанно превращаюь в существо, которе никак нельзя назвать">
+    <img class="image" src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExemR4aGY3MjNkd3RvYjJzdDhxdzA4MnBtZGcxcHd0M2pyemdpYjBpYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/pxfmi3rjxYQvQUuazB/giphy.gif" title="30. никем. начиная с 2022 года, неосознанно превращаюь в существо, которе никак нельзя назвать">
   </figure>
 
 
   <figure id="an31">
-    <img class="image" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNnB0em4yb2hjdXFvaTd2aWRzcjNwejF4ZGxxeHlvejRyNDc2NGFlbSZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/KhdHwaqRgo8JB3omMg/giphy.gif" title="Изменчивым ветром, что порой несёт на плечах бурю, а порой пронисит благословенную прохладу
+    <img class="image" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNnB0em4yb2hjdXFvaTd2aWRzcjNwejF4ZGxxeHlvejRyNDc2NGFlbSZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/KhdHwaqRgo8JB3omMg/giphy.gif" title="31. Изменчивым ветром, что порой несёт на плечах бурю, а порой пронисит благословенную прохладу
 Солнечным светом, проживающим облака и освещающим ночи, будучи отрадённым от Луны
 Грибом, что пронизывает земную твердь и соединяет леса незримыми сетями
 Миром - всем и ничем, пребывающим в сладостном полусне в колыбели вечности">
   </figure>
   <figure id="an32">
-    <img class="image" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHkyeDZqcGwyY3pucG5nNDlzbGdoNmIzOGMwMnRrMDE0MjlmajJseSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KR9WELRdBxYMJ2sysR/giphy.gif" title="Я был бы щелью в тектонической плите, просачивающимся изломом между формами бытия. Ни жизнь, ни смерть — но пространство, где они встречаются.">
+    <img class="image" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHkyeDZqcGwyY3pucG5nNDlzbGdoNmIzOGMwMnRrMDE0MjlmajJseSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KR9WELRdBxYMJ2sysR/giphy.gif" title="32. Я был бы щелью в тектонической плите, просачивающимся изломом между формами бытия. Ни жизнь, ни смерть — но пространство, где они встречаются.">
   </figure>
   <figure id="an33">
-    <img class="image" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZm00cW96Z2g3aHE5MjltZzI4emw1bzJrbjB1dDdndDdqc2VrY3NvOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/KUbedr2VqvIQM/giphy.gif" title="Книгой выдуманного автора">
+    <img class="image" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZm00cW96Z2g3aHE5MjltZzI4emw1bzJrbjB1dDdndDdqc2VrY3NvOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/KUbedr2VqvIQM/giphy.gif" title="33. Книгой выдуманного автора">
   </figure>
   <figure id="an34">
-    <img class="image" src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWg0YmwycnQ0eDA2eDVzcnlrZzltOGNtNjR2Ynp3ZHA4OG1pcHVlaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3oEduHm87jySjKsGxW/giphy.gif" title="звуковой волной">
+    <img class="image" src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWg0YmwycnQ0eDA2eDVzcnlrZzltOGNtNjR2Ynp3ZHA4OG1pcHVlaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3oEduHm87jySjKsGxW/giphy.gif" title="34. звуковой волной">
   </figure>
   <figure id="an35">
-    <img class="image" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExamVleWRyYXYxajNiejN3bXprOGE0bGlwZ2cyYjBsazRmanl4end1MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1qW2LNsbx1VsI/giphy.gif" title="Я была бы водой. Во всех ее состояниях и проявлениях. Глубокой силой, независимой и неоднозначной. 
+    <img class="image" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExamVleWRyYXYxajNiejN3bXprOGE0bGlwZ2cyYjBsazRmanl4end1MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1qW2LNsbx1VsI/giphy.gif" title="35. Я была бы водой. Во всех ее состояниях и проявлениях. Глубокой силой, независимой и неоднозначной. 
     Я бы давала жизнь и забирала ее. Была бы спокойна и в то же время эмоциональна.">
   </figure>
   <figure id="an36">
-    <img class="image" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHN4Y3F6M3FsNDZhMWludzEyYTBpZm1wamx2dGdvbXZxaW4xZWFueiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/AriV49VPU8CLiUluzt/giphy.gif" title="Я была бы паутинкой, которая зацепилась за стебель травы и колышется на ветру где-то посреди поля.">
+    <img class="image" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHN4Y3F6M3FsNDZhMWludzEyYTBpZm1wamx2dGdvbXZxaW4xZWFueiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/AriV49VPU8CLiUluzt/giphy.gif" title="36. Я была бы паутинкой, которая зацепилась за стебель травы и колышется на ветру где-то посреди поля.">
   </figure>
   <figure id="an37">
-    <img class="image" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDBuY3dhZ3E0aGhuNjZtajZnOWphcnZhaDZlaWpmdXB4Ymhrb3RzcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/9iSlGflR0l9987MiFs/giphy.gif" title="Черной дырой">
+    <img class="image" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDBuY3dhZ3E0aGhuNjZtajZnOWphcnZhaDZlaWpmdXB4Ymhrb3RzcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/9iSlGflR0l9987MiFs/giphy.gif" title="37. Черной дырой">
   </figure>
   <figure id="an38">
-    <img class="image" src="assets/moss.png" title="Мхом">
+    <img class="image" src="assets/moss.png" title="38. Мхом">
   </figure>
   <figure id="an39">
-    <img class="image" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNnY0eHhpM3ozb3FocDZrN2xmOWhxM3l1cHdxMGxoaWtpbmhxN291aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Y4vip84hg9BhdNidTR/giphy.gif" title="Я была бы ветром, путешествовала по лесам и полям, равнинам и горам, гоняла бы облака, насыщала из каплями воды из озёр и водоёмов, была бы свежим бризом моря, поднимала волны в океане, я бы разносила песок и слухи по всей округе, пыталась донести звук одного человека к другому, я бы облетела горы и гнала тучи с проливным дождем в далёкие поля, я была бы ураганом и штормом, когда меня разозлят, я бы валила деревья и разносила пожары, я помогала бы перелетеым птицам добраться до дома, я былы бы просто легким ветерком а солнечную погоду и наслаждалась каждым днем, как и все те животные и люди, которых я бы встречала. ">
+    <img class="image" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNnY0eHhpM3ozb3FocDZrN2xmOWhxM3l1cHdxMGxoaWtpbmhxN291aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Y4vip84hg9BhdNidTR/giphy.gif" title="39. Я была бы ветром, путешествовала по лесам и полям, равнинам и горам, гоняла бы облака, насыщала из каплями воды из озёр и водоёмов, была бы свежим бризом моря, поднимала волны в океане, я бы разносила песок и слухи по всей округе, пыталась донести звук одного человека к другому, я бы облетела горы и гнала тучи с проливным дождем в далёкие поля, я была бы ураганом и штормом, когда меня разозлят, я бы валила деревья и разносила пожары, я помогала бы перелетеым птицам добраться до дома, я былы бы просто легким ветерком а солнечную погоду и наслаждалась каждым днем, как и все те животные и люди, которых я бы встречала. ">
   </figure>
   <figure id="an40">
-    <img class="image" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmw4N3g5Zjk2ajJ2N243Z2p2aTRudGJ3bXQ2NDR3emtvcjdzdjBiNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/bcAXnpZhenJA5McqfL/giphy.gif" title="Частью свободного Вселенского Сознания">
+    <img class="image" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmw4N3g5Zjk2ajJ2N243Z2p2aTRudGJ3bXQ2NDR3emtvcjdzdjBiNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/bcAXnpZhenJA5McqfL/giphy.gif" title="40. Частью свободного Вселенского Сознания">
   </figure>
 
 
   <figure id="an41">
-    <img class="image" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGNhaXBjajl2eThyM2o4YmR1bjM2OGh1eTFlNjltN3I3eWVrZTE2YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/D35fOVm9gSQ91icJeR/giphy.gif" title="Однажды мне уже задали такой вопрос,. Я мысленно пыталась представить и выбрать образ, и поняла, что не могу, и не надо - все является частью одного целого, меня. Я - маленькая Вселенная.">
+    <img class="image" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGNhaXBjajl2eThyM2o4YmR1bjM2OGh1eTFlNjltN3I3eWVrZTE2YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/D35fOVm9gSQ91icJeR/giphy.gif" title="41. Однажды мне уже задали такой вопрос,. Я мысленно пыталась представить и выбрать образ, и поняла, что не могу, и не надо - все является частью одного целого, меня. Я - маленькая Вселенная.">
   </figure>
   <figure id="an42">
-    <img class="image" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXVmanlkc2Mwcmo2ZjY0M2x3d2JoY3p6dHdsOXRuNHVhcXByMjhkNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/qL5y9JmuKPGLDzIbuZ/giphy.gif" title="Маленькой сосенкой">
+    <img class="image" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXVmanlkc2Mwcmo2ZjY0M2x3d2JoY3p6dHdsOXRuNHVhcXByMjhkNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/qL5y9JmuKPGLDzIbuZ/giphy.gif" title="42. Маленькой сосенкой">
   </figure>
   <figure id="an43">
-    <img class="image" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNTFzenhsem56dzFyN3RrNXRtM3kzbTBydjYwY2h2MmM3em16bTVkdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o7TKIzYtUMnuRQexq/giphy.gif" title="Я хотела выбыть рекой, которая быстротечна, не стоит на месте, в ней кипит жизнь и она дает возможность жить другим созданиям.">
+    <img class="image" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNTFzenhsem56dzFyN3RrNXRtM3kzbTBydjYwY2h2MmM3em16bTVkdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o7TKIzYtUMnuRQexq/giphy.gif" title="43. Я хотела выбыть рекой, которая быстротечна, не стоит на месте, в ней кипит жизнь и она дает возможность жить другим созданиям.">
   </figure>
   <figure id="an44">
-    <img class="image" src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbDV3MXBscXZnYTdoMnFraGU0YW90YTBuYWhoYnV6YnY2bnFydG83cyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/h1nS97vaSt6GS2omGF/giphy.gif" title="Множество форм я сменил, но сущность осталась собою.
+    <img class="image" src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbDV3MXBscXZnYTdoMnFraGU0YW90YTBuYWhoYnV6YnY2bnFydG83cyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/h1nS97vaSt6GS2omGF/giphy.gif" title="44. Множество форм я сменил, но сущность осталась собою.
     Осталась дрожанием струны на границе слышимости. Листом всеобщего древа.
     Я плывущая краска палитры, вечно сущей и вечно изменчивой, объединившей богатство оттенков мира.">
   </figure>
   <figure id="an45">
-    <img class="image" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbDhvY2JuNTVkdXA3Nmp6OGp6YnRuY21oODAzZDh3bnAzcDIxZ2l5aSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/Q6iDnNqtiLVrQsd8Rp/giphy.gif" title="духом">
+    <img class="image" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbDhvY2JuNTVkdXA3Nmp6OGp6YnRuY21oODAzZDh3bnAzcDIxZ2l5aSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/Q6iDnNqtiLVrQsd8Rp/giphy.gif" title="45. духом">
   </figure>
   <figure id="an46">
-    <img class="image" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdzRycnpwMzFsZDJlNzkzNXQycjMyZWxucDNwZDdiaWprMjI1bDNvNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fqVodOPZg9uBYvYjes/giphy.gif" title="я молния кчау рассекаю небесную глыбу хлёстким разрядом и осыпаюсь синими искрами.">
+    <img class="image" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdzRycnpwMzFsZDJlNzkzNXQycjMyZWxucDNwZDdiaWprMjI1bDNvNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fqVodOPZg9uBYvYjes/giphy.gif" title="46. я молния кчау рассекаю небесную глыбу хлёстким разрядом и осыпаюсь синими искрами.">
   </figure>
   <figure id="an47">
-    <img class="image" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGljZ2Nxbnpia3dkeTlzcDI1dG0yOTgzOTJ4NXRvN2JnaTJkNGJzdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l3q2Cy90VMhfoA9BC/giphy.gif" title="Импульсом энергии сознания в пространстве">
+    <img class="image" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGljZ2Nxbnpia3dkeTlzcDI1dG0yOTgzOTJ4NXRvN2JnaTJkNGJzdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l3q2Cy90VMhfoA9BC/giphy.gif" title="47. Импульсом энергии сознания в пространстве">
   </figure>
   <figure id="an48">
-    <img class="image" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmxzbHRhZXpiYXRrOTU3d2o3eGtueThqeTcwYjdvdTYyZG1tNDBoZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/MjepIFhy5v9q3YEdT9/giphy.gif" title="Щупальцеобразное создание, состоящее из уплотненного до состояния плазмы света. Это концентрация бесконечной разумности пространства, помещенная в существо, не имеющее эго, отделяющего его от остального мира. Это агент сознания всего сущего целиком.
+    <img class="image" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmxzbHRhZXpiYXRrOTU3d2o3eGtueThqeTcwYjdvdTYyZG1tNDBoZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/MjepIFhy5v9q3YEdT9/giphy.gif" title="48. Щупальцеобразным созданием, состоящим из уплотненного до состояния плазмы света. Это концентрация бесконечной разумности пространства, помещенная в существо, не имеющее эго, отделяющего его от остального мира. Это агент сознания всего сущего целиком.
     Оно воплощает иные принципы жизнетворчества, воплощая энергию, которая связывает все живые существа и явления во вселенной. Это создание стало бы символом единства, напоминая о том, что всё в мире влияет друг на друга.">
   </figure>
   <figure id="an49">
-    <img class="image" src="https://media.giphy.com/media/45aI8f1nI1b071X96C/giphy.gif?cid=ecf05e47ocoodgst6wzkuugb3e62lo74hskiw6027l3cafrb&ep=v1_gifs_related&rid=giphy.gif&ct=g" title="У меня деперсонализация. Я не ощущаю себя человеком или любым иным агентом существующей среды. Место, а не человек, проходная для событий, истории, чувств. Меня буквально нет. И нет реальности вокруг меня.  Чтобы узнать, что я такое, Я реализовала социальный проект , исследующий состояние деперсонализации и дереализации. В его рамках Я жила в монастырях, устраивала дискуссии с монахами, психиатрами, нейробиологами, слепыми. Я искала, что я такое. Родилось несколько описаний: в моих рёбрах умер Бог и теперь огромный труп его давит на ребра, расширяя их, жизнь была утеряна, но смысл её был спасён, а также найден факт, что пророки имеют дпдр.">
+    <img class="image" src="https://media.giphy.com/media/45aI8f1nI1b071X96C/giphy.gif?cid=ecf05e47ocoodgst6wzkuugb3e62lo74hskiw6027l3cafrb&ep=v1_gifs_related&rid=giphy.gif&ct=g" title="49. У меня деперсонализация. Я не ощущаю себя человеком или любым иным агентом существующей среды. Место, а не человек, проходная для событий, истории, чувств. Меня буквально нет. И нет реальности вокруг меня.  Чтобы узнать, что я такое, Я реализовала социальный проект , исследующий состояние деперсонализации и дереализации. В его рамках Я жила в монастырях, устраивала дискуссии с монахами, психиатрами, нейробиологами, слепыми. Я искала, что я такое. Родилось несколько описаний: в моих рёбрах умер Бог и теперь огромный труп его давит на ребра, расширяя их, жизнь была утеряна, но смысл её был спасён, а также найден факт, что пророки имеют дпдр.">
   </figure>
   <figure id="an50">
-    <img class="image" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExam1udWM0MDM5N2VuNWh6bThidXYxZGg3OHYweXZqeno2NTBpc2tqaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tBOpF46yMbIZRJGcuw/giphy.gif" title="Огнем от спички ">
+    <img class="image" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExam1udWM0MDM5N2VuNWh6bThidXYxZGg3OHYweXZqeno2NTBpc2tqaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tBOpF46yMbIZRJGcuw/giphy.gif" title="50. Огнем от спички ">
   </figure>
 
 
   <figure id="an51">
-    <img class="image" src="https://64.media.tumblr.com/dfeed62df645e1e4e98bf9017d4462f2/64dacef358d68dcc-a7/s400x600/c7db0f4976bae210cd4a38558975d28ad46a777c.gifv"title="морской водой">
+    <img class="image" src="https://64.media.tumblr.com/dfeed62df645e1e4e98bf9017d4462f2/64dacef358d68dcc-a7/s400x600/c7db0f4976bae210cd4a38558975d28ad46a777c.gifv"title="51. морской водой">
   </figure>
   <figure id="an52">
-    <img class="image" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGkyczQ3dnA0eGJza3V3bzc4YW90aHR0aXBsMDUwdDA4a3V3aGQ1YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/n8iVtgWrBghjO/giphy.gif" title="Я была бы бактерией, бурлящей в глубинах кишечника ладожской нерпы — микроскопическим скитальцем, постоянно растворяющим границы между собой и другими. Быть этим бесконечно малым архитектором распада означало бы существовать имманентно, быть слепым импульсом метаболизма без бремени сознания, но всё равно осуществлять насилие трансформации над плотью-материей, которая неосознанно укрывает меня. Я была бы той частью телесных процессов нерпы, которая не является ни гостем, ни паразитом, но является самим условием неустойчивого равновесия своего хозяина. Здесь нет свободы, только растворение, только слияние с перистальтическими ритмами тела, которое меня не знает, но не может существовать без меня.">
+    <img class="image" src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGkyczQ3dnA0eGJza3V3bzc4YW90aHR0aXBsMDUwdDA4a3V3aGQ1YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/n8iVtgWrBghjO/giphy.gif" title="52. Я была бы бактерией, бурлящей в глубинах кишечника ладожской нерпы — микроскопическим скитальцем, постоянно растворяющим границы между собой и другими. Быть этим бесконечно малым архитектором распада означало бы существовать имманентно, быть слепым импульсом метаболизма без бремени сознания, но всё равно осуществлять насилие трансформации над плотью-материей, которая неосознанно укрывает меня. Я была бы той частью телесных процессов нерпы, которая не является ни гостем, ни паразитом, но является самим условием неустойчивого равновесия своего хозяина. Здесь нет свободы, только растворение, только слияние с перистальтическими ритмами тела, которое меня не знает, но не может существовать без меня.">
   </figure>
   <figure id="an53">
-    <img class="image" src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnZlOW5pM211NTc4b2xsanU5aGU1YXpqeTY4ZjN3Z2VibG9lZXJxaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1fgdcvInkyChdjPHtB/giphy.gif" title="Частью потока энергии">
+    <img class="image" src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnZlOW5pM211NTc4b2xsanU5aGU1YXpqeTY4ZjN3Z2VibG9lZXJxaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1fgdcvInkyChdjPHtB/giphy.gif" title="53. Частью потока энергии">
   </figure>
 
 
@@ -353,86 +628,154 @@ id start
     
 
 
-
+<!--
 <div>
   <img src="store_example.png" id="sk_store">
 </div>
+-->
 
 
 
-
-<!--книшки или учебные ресурсы
+<!--книшки или учебные ресурсы end of Books -->
     
 
-      <div id="Books">
-          <h2>Books</h2>
+      <div id="library">
+          <p>Books</p>
           <div class="divider"></div>
 
           <div>
-              <img src="tcu_book.gif">
+              <img src="https://logosjournal.ru/upload/iblock/ef3/czn268qib6t2mzcinxma6tsvvjz3xl7l.jpg" style="height: 200px;">
           </div>
-          
           <p>
-              <b>Turing Complete User</b><br>
-              ISBN 978-3-98501-071-4 (PDF)<br>
-ISBN 978-3-98501-072-1 (Softcover)</p>
-              <i><a href="https://books.ub.uni-heidelberg.de/arthistoricum/catalog/book/972?lang=en">Monograph</a>, part of the <a href="https://interfacecritique.net/">Interface</a> Critique series 🇬🇧 </i>
+              ISSN: 0869-5377<br>
+              eISSN: 2499-9628</p>
+              <i><a href="https://logosjournal.ru/archive/2024/2790/">журнал Logos.<br></a>Художественные исследования</i>
           <p></p>
-          <p>2021</p>
+          <p>2024</p>
           <div class="divider"></div>
+          <br>
 
-                           
-          <p>
 
-          </p><div>
-              <img src="olna.png">
+          <div>
+              <img src="https://cdn.litres.ru/pub/c/cover/24260404.jpg" style="height: 200px;">
           </div>
-          
           <p>
-              <b>Olia Lialina — Net Artist</b><br>
-              ISBN : 978-2-37896-186-2</p>
-              <i><a href="https://www.lespressesdureel.com/ouvrage.php?id=8156">Monograph</a> edited by Valerie Perrin 🇬🇧 🇫🇷</i>
+              ISBN: 978-5-91103-336-1</p>
+              <i><a href="https://psv4.userapi.com/s/v1/d/WZaN5F1yVrhZAO_eiiBJMVoCupVOObLk7GDTOaTG3dyIACgvuWWtKXIVWWmKNlU9LQRnMZjBjDhI-VX6fscbm7R7FRQXH81YUczz_QmgcybCgpKXHjWxLQ/Tszin_A_-_Grib_na_krayu_sveta_O_zhizni_na_ruinakh_kapitalizma_-2017.pdf" >Гриб на краю света. О возможности жизни на руинах капитализма<br></a>
+Цзин Анна Лёвенхаупт</i>
           <p></p>
-          <p>2020</p>
+          <p>2017</p>
           <div class="divider"></div>
+          <br>
 
-           <div>
-              <img src="ar_page.png">
-          </div>
-          
-          <p>
-              <b>Asymmetrical Response</b><br>
-               ISBN-10 : 3960983182 </p>
-              <i><a href="https://manuelbuerger.com/asymmetrical">Catalog</a> edited by Caitlin Jones 🇬🇧 </i>
-          <p></p>
-          <p>2018</p>
-          <div class="divider"></div>
-           <div>
-              <img src="mbcbftw_page.png">
-          </div>
-          
-          <p>
-              <b>MBCBFTW</b><br>
-               ISBN    3856166890 </p>
-              <i><a href="https://www.hek.ch/en/shop/my-boyfriend-came-back-from-the-war-online-since-1996/">Catalog</a> edited by Sabine Himmelbach and Olia Lialina 🇬🇧 🇩🇪 </i>
-              
-          <p></p>
-          <p>2016</p>
-          <div class="divider"></div>
-           <div>
-              <img src="df_page.png">
-          </div>
-          
-          <p>
-              <b>Digital Folklore</b><br>
-                ISBN-10 : 3937982256 </p>
-              <i><a href="https://digitalfolklore.org/">Reader</a> edited by Dragan Espenschied and Olia Lialina 🇬🇧 🇩🇪</i>
-          <p></p>
-          <p>2009</p>
-          <div class="divider"></div>
 
-      </div>  end of Books -->
+          <div>
+              <img src="https://sun9-2.userapi.com/impg/c855432/v855432548/24b86b/Wz8V6HUUo1s.jpg?size=461x666&quality=96&sign=a1595e773cd3c7bfb3d2b581c7c2f21a&type=album" style="height: 200px;">
+          </div>
+          <p>
+              ISBN: 978-5-9906611-6-S<br>
+              ISBN: 978-5-9906611-4-1</p>    
+              <i><a href="https://vk.com/doc133757284_563078160?hash=zZDiA98zHKEURZdSQ9PtGNfPRcii85Y9XlFaqgzTTx0&dl=8aFVzs416EXdnjhGqmaULHZxfDd7o2zOolmEmRv9WZk&api=1&no_preview=1">Ужас философии. В пыли этой планеты</a><br>Юджин Такер</i>
+          <p></p>
+          <p>2017</p>
+          <div class="divider"></div>
+          <br>
 
+          <div>
+              <img src="https://logosjournal.ru/upload/iblock/f6c/qtahjvwgj96eod5m9o8q131n4hephwk8.jpg" style="height: 200px;">
+          </div>
+          <p>
+              ISSN: 0869-5377<br>
+              eISSN: 2499-9628</p>
+              <i><a href="https://logosjournal.ru/upload/iblock/296/1k1ak4zvmky9ojvnnj435kr3e81vbdmm.pdf">Нестабильная природа и «тьма вещей»: между европейским двоесмыслием и китайским корреляционизмом<br></a>Валентин Матвеенко</i>
+          <p></p>
+          <p>2023</p>
+          <div class="divider"></div>
+          <br>
+
+          <div>
+              <img src="https://sun9-44.userapi.com/impg/b0_pANit-fp_RsHx19HHextusNRGWKBUIZADbQ/e8GUsCM0KWo.jpg?size=783x1200&quality=95&sign=b8e5203d2a2ef3731b337d37c82c9182&type=album" style="height: 200px;">
+          </div>
+          <p>
+              ISBN: 978-5-91103-776-5</p>
+              <i><a href="https://vk.com/doc369932387_679791668?hash=dZYV0awQJYmnTGh0F7ruNlC9fOYgAPHy7XsFsQk85ig&dl=ajzEl66ZwGrYl8T7UZayIZEtFcORfeNGY25uBEZd8ng&api=1&no_preview=1">Растительное мышление. Философия вегетативной жизни<br></a>Майкл Мардер</i>
+          <p></p>
+          <p>2024</p>
+          <div class="divider"></div>
+          <br>
+
+          <div>
+              <img src="https://chimeric-worlding.tiger.exposed/_app/immutable/assets/title-img.09fcccfb.png" style="height: 200px;">
+          </div>
+              <i><a href="https://chimeric-worlding.tiger.exposed/">Chimeric Worlding: Graphic Design, Poetics, and Worldbuilding<br></a>Tiger Dingsun</i>
+          <p></p>
+          <p>2024</p>
+          <div class="divider"></div>
+          <br>
+          
+          <div>
+              <img src="https://www.podpisnie.ru/upload/iblock/5d3/vxno22e2kravmdyphg5xg18yl4im9807.jpg" style="height: 200px;">
+          </div>
+          <p>
+              ISBN: 978-5-600-04020-5</p>
+              <i><a href="https://signumde.space/">Дизайн Перемен. Микродинамика креативного действия<br></a>Лола Г. Н.</i>
+          <p></p>
+          <p>2024</p>
+          <div class="divider"></div>
+          <br>
+
+          <div>
+              <img src="https://sun9-63.userapi.com/impg/Ehu-0OC4U705QE_X5pjA513h5eGhbW63iLd_xQ/RAIvUaH60qY.jpg?size=1200x1719&quality=95&sign=54e3ea58c653bfc7efa1319c43c828b1&type=album" style="height: 200px;">
+          </div>
+          <p>
+              ISBN: 978-5-91103-831-1</p>
+              <i><a href="https://vk.com/doc369932387_680971731?hash=whalHgfJOZziWFzqhpVxuDoFtGJL4LNcwJGuB0MqB70&dl=9WZJ2IhsbvbeFOppZHjNf4JcX9dIs8g1K2uvqutefis&api=1&no_preview=1">Путешествие в окружающие миры животных и людей. Теория значения<br></a>Якоб фон Икскюль</i>
+          <p></p>
+          <p>2024</p>
+          <div class="divider"></div>
+          <br>          
+
+          <div>
+              <img src="https://cyberleninka.ru/article/n/situativnye-znaniya-vopros-o-nauke-v-feminizme-i-preimuschestvo-chastichnoy-perspektivy/cover" style="height: 200px;">
+          </div>
+          <p>
+              ISSN: 978-5-04-321966-4</p>
+              <i><a href="https://cyberleninka.ru/article/n/situativnye-znaniya-vopros-o-nauke-v-feminizme-i-preimuschestvo-chastichnoy-perspektivy/viewer">Ситуативные знания: вопрос о науке в феминизме и преимущество частичной перспективы<br></a>Харауэй Донна</i>
+          <p></p>
+          <p>1988</p>
+          <div class="divider"></div>
+          <br>
+
+      </div>  
+      <div class="content" id="what"><p>Это сайт, в котором ты можешь побродить в среде нечеловеческих существ</p></div>
+  
+<pre id="lin">~ ‘ .+. \
+               ; .,
+                    ~ ‘ .+.
+                              ‘  
+                                    =</pre>
+<pre id="lin1">                                                                                                                                                                                       /
+                       
+                                                                                                                                                                               ;  .,
+                 
+                                                                                                                                                     , “        ~   ‘ . +    .
+               
+                                                                                                                            , “        ~   ‘ . +    .
+            
+                                                                                                                 ...             ‘  
+                                                                                                         .  .   
+                                                                                                    
+                                                                                                      \
+                                                                                                  ;  .,
+                                                                  , “        ~  ~    .
+                                       , “        ~   ‘ . ~    .
+                         ...             ‘  
+                  ...   
+ =</pre>
+    <div class="content" id="what1"><p>(наводи)</p></div>
+        <div class="content" id="what2"><p><-(открывай, что курсивом)<i></i></p></div>
+
+</div>
   </body>
 
  

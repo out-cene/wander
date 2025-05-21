@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Popup Window -->
+<div id="popup1" class="Fpp-window" style="display: none;">
+    <p>
+      “[...] not only is landscape the medium of naturally existing forces, flows and processes, but the very matter that constitutes landscape itself — the rocks, the soils, the fossils it produces — all add temporal, ecological and geological dimensionality to its vitality — its non-human agency. On the other hand, this agency, if well-documented in its materiality, can play a more interpretive role in constituting a kind of historical narrative of human culture — a means to prove the recent and deep past of the human condition in relation to objects extracted from or placed within the landscape. Taken together, these various discursive tendencies instigate a practice in which the rigorous documentation of materials, plants and their unique ecologies can be curated to reveal a kind of social and cultural agency that passes through the material fragments of landscape, entangling the human and non-human worlds in a complex, more-than-human ecology. Landscape, we could say, appears today as a kind of as-found archive of social and cultural history.”
+      <br><em>— Ross Exo Adams, “Landscapes of Post-History”</em>
+    </p>
+    <button onclick="show('none', 'popup1')">&laquo;&laquo; Close</button>
+  </div>
+  
+  <!-- Trigger Link -->
+  <a href="#open" onclick="show('block', 'popup1')">
+    <p class="p1" id="pop1">[...]</p>
+  </a>
+  <script>
+    function show(display, id) {
+      const popup = document.getElementById(id);
+      popup.style.display = display;
+  
+      // Добавляем или убираем обработчик клавиш
+      if (display === 'block') {
+        document.addEventListener('keydown', escClose);
+      } else {
+        document.removeEventListener('keydown', escClose);
+      }
+  
+      function escClose(event) {
+        if (event.key === 'Escape') {
+          popup.style.display = 'none';
+          document.removeEventListener('keydown', escClose);
+        }
+      }
+    }
+  </script>
+  
+    
+</body>
+</html>

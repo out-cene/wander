@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container" style="position: relative; width: 800px; height: 600px; border: 1px solid #ccc;"></div>
+
+<script>
+  const words = "Landscape appears today as a kind of archive shaped by history".split(" ");
+
+  const container = document.getElementById("container");
+
+  // Точки, через которые будет проходить кривая
+  const controlPoints = [
+    { x: 100, y: 500 },
+    { x: 300, y: 100 },
+    { x: 500, y: 300 },
+
+  ];
+
+  // Функция: интерполяция по кривой Безье (через де Кастельжо)
+  function getBezierPoint(t, points) {
+    let temp = [...points];
+    while (temp.length > 1) {
+      const next = [];
+      for (let i = 0; i < temp.length - 1; i++) {
+        const x = (1 - t) * temp[i].x + t * temp[i + 1].x;
+        const y = (1 - t) * temp[i].y + t * temp[i + 1].y;
+        next.push({ x, y });
+      }
+      temp = next;
+    }
+    return temp[0];
+  }
+
+  // Расположение слов вдоль кривой
+  words.forEach((word, i) => {
+    const t = i / (words.length - 1); // нормализованная позиция на кривой
+    const point = getBezierPoint(t, controlPoints);
+
+    const span = document.createElement("span");
+    span.textContent = word;
+    span.style.position = "absolute";
+    span.style.left = `${point.x}px`;
+    span.style.top = `${point.y}px`;
+    span.style.whiteSpace = "nowrap";
+    container.appendChild(span);
+  });
+
+  // Визуализация точек (по желанию)
+  controlPoints.forEach(p => {
+    const dot = document.createElement("div");
+    dot.style.position = "absolute";
+    dot.style.left = `${p.x - 5}px`;
+    dot.style.top = `${p.y - 5}px`;
+    dot.style.width = "10px";
+    dot.style.height = "10px";
+    dot.style.backgroundColor = "red";
+    dot.style.borderRadius = "50%";
+    container.appendChild(dot);
+  });
+</script>
+
+           
+</body>
+</html>

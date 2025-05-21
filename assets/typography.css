@@ -15,48 +15,235 @@
 
 
 body{
-    background-image: url("");
+
     background-color:#fffffa;
     background-repeat: no-repeat;
     background-position:absolute ;
     background-size: 8900px, 5760px;
     font-size: 16px;
     line-height: 18px;
+}
 
 
+    /* ЗАДЕРЖИВАЮЩИЙ ЭКРАН (анти-каптча) */
+    #captcha-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(242, 242, 242, 0.98);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .captcha-box {
+      background-color: white;
+      border: 1px solid #d3d3d3;
+      border-radius: 8px;
+      padding: 20px 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+    }
+
+    .captcha-box input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      margin-right: 15px;
+    }
+
+    .captcha-label {
+        font-family: 'IBMPlexSerif-regular';
+        opacity: 80%;
+
+    }
+
+    .fake-logo {
+      margin-left: auto;
+      font-size: 12px;
+      color: #888;
+      text-align: right;
+    }
+
+    /* ОСНОВНОЙ САЙТ (скрыт по умолчанию) */
+    #main-site {
+      display: none;
+      padding: 40px;
+    }
+
+    /* Анимация исчезновения */
+    .fade-out {
+      animation: fadeOut 1s forwards;
+    }
+
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+
+#lin{
+      pointer-events: none;
+    font-family: 'IBMPlexSerif-regular';
+    position: absolute;
+    left: 3850px;
+    top: 2970px;    
+    opacity: 50%;
+        filter: blur(1px);
+}
+
+#lin1{
+      pointer-events: none;
+    font-family: 'IBMPlexSerif-regular';
+    position: absolute;
+    left: 3850px;
+    top: 2620px;    
+    opacity: 50%;
+        filter: blur(1px);
+}
+#what{
+    font-family: 'IBMPlexSerif-regular';
+    position: absolute;
+	position: absolute;
+	left: 4000px;
+	top: 3032px;
+    width: 30vh;
+    filter: blur(1px);
+    opacity: 50%;
+    	transition-duration:0.5s;
+}
+#what:hover{
+    filter: blur(0px);
+    opacity: 100%;
+
+}
+#what1{
+        position: absolute;
+    left: 3750px;
+    top: 2950px;
+    z-index: 1000;
+        filter: blur(1px);
+    opacity: 50%;
+    	transition-duration:0.5s;
+}
+#what1:hover{
+    filter: blur(0px);
+    opacity: 100%;
+
+}
+
+#what2{
+        position: absolute;
+    position: absolute;
+    left: 4500px;
+    top: 2550px;
+    rotate: -4deg;
+    z-index: 1000;
+        filter: blur(1px);
+    opacity: 50%;
+        transition-duration:0.5s;
+}
+#what2:hover{
+    filter: blur(0px);
+    opacity: 100%;
+
+}
+
+#manifest{
+        font-family: 'IBMPlexSerif-regular';
+    position: absolute;
+    bottom: 1vh;
+    right: 20px;
+}
+
+#manifest1{
+    font-family: 'IBMPlexSerif-regular';
+    position: absolute;
+    top: 0px;
+    left: 20px;
+}
+#manifest2{
+        font-family: 'IBMPlexSerif-regular';
+    position: absolute;
+    top: 0px;
+    left: 30vw;
 }
 
 
 
 #about {
+    font-family: 'IBMPlexSerif-regular';      
 	position: absolute;
-	left: 4000px;
-	top: 2832px;
-	height: 30px;
-	width: 30px;
-	background-color:#fffffa;
-    border-radius: 100px;
-    text-align: center;
-    text-transform: capitalize;
-    
+	left: 4100px;
+	top: 2850px;
+
 }
+
+#writing {
+    font-family: 'IBMPlexSerif-regular';  
+	position: absolute;
+	left: 30vw;
+	top: 5000px;
+	height: 30px;
+
+	background-color: rgba(255, 255, 255, 0.057);
+}
+
 #coding {
+    font-family: 'IBMPlexSerif-regular';      
 	position: absolute;
 	left: 6034px;
 	top: 166px;
 	height: 30px;
 	width: 30px;
-	background-color: blue;
 }
 #store {
+    font-family: 'IBMPlexSerif-regular';      
 	position: absolute;
-	left: 6240px;
-	top: 5000px;
+	left: 7230px;
+	top: 7000px;
 	height: 30px;
-	width: 30px;
-	background-color: green;
 }
 
+#shop_container{
+	position: relative;
+    width: 100px;
+	left: -700px;
+	top: -300px;
+}
+
+
+#item1{
+    width: 10vw;
+}
+#item2{
+    position: absolute;
+    left: 1000px;
+    transform: rotate(5deg);
+}
+#item3{
+	position: absolute;
+    left: -50px;
+    top: 300px;
+    transform: rotate(5deg);
+    scale: 75%;
+}
+#item4{
+    position: absolute;
+    width: 10vw;
+    transform: rotate(-15deg);
+    scale: 75%;
+}
+#item5{
+    position: absolute;
+    left: 1000px;
+    
+}
 
 
 /*body{
@@ -73,9 +260,13 @@ https://d2w9rnfcy7mm78.cloudfront.net/28726595/original_314b7bf8fb5fd51460da9fcd
 
 
 
+/** библиотека **/
 
-
-
+#library{
+    position: absolute;
+    top: 4650px;
+    left: 20px;
+}
 
 
 
@@ -113,49 +304,43 @@ https://d2w9rnfcy7mm78.cloudfront.net/28726595/original_314b7bf8fb5fd51460da9fcd
 
 
 
-
-/**
-#startElement{
-	position: relative;
-	left: 3934px;
-	top: 2066px;
+#t1{
+    position: absolute;
+    left: 3600px;
+	top: 3200px;
+    width: 20vw;
 }
 
-#storeElement{
-	position: relative;
-	left: 6934px;
-	top: 2066px;
+#t2{
+    position: absolute;
+    left: 3200px;
+	top: 3400px;
+    width: 20vw;
 }
-	**/
-
-
-#sk_store{
-	position: absolute;
-	z-index: -10;
-	left:4840px;
-	top: 4280px;
+#t3{
+    position: absolute;
+    left: 3000px;
+	top: 3600px;
+    width: 20vw;
 }
 
 
 
-/** по-пап **/
-
-
-
-
-
+/** оформление по-пап окна **/
 
 .Fpp-window {
-    font-family: 'IBMPlexSerif-italic';
+    font-family: 'IBMPlexSerif-regular';
     display: none;
     background: #fff;
     position: fixed;
-	
-    z-index: 200;
-    height:max-content;
+    padding-left: 20px;
+        padding-right: 20px;
+    transform: rotate(-2deg);
+    z-index: 2000;
+    height: max-content;
 	width: 400px;
     margin: 70px auto 70px auto;
-    text-align: center;
+    text-align: left;
     overflow-y: auto;
     left: 0;
     right: 0;
@@ -178,11 +363,17 @@ https://d2w9rnfcy7mm78.cloudfront.net/28726595/original_314b7bf8fb5fd51460da9fcd
     right: 0;
     top: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.111);
 }
+
+
+
+
+
+
+
 /** раскид попапов **/
 #pop1{
-
 	position: absolute;
 	transform: translate(1520px, 820px);
    }
@@ -196,6 +387,49 @@ https://d2w9rnfcy7mm78.cloudfront.net/28726595/original_314b7bf8fb5fd51460da9fcd
  	transform: translate(1620px, 720px);
 }
 
+
+#pop4{
+	position: absolute;
+ 	transform: translate(1650px, 560px);
+}
+
+#pop5{
+	position: absolute;
+ 	transform: translate(2650px, 760px);
+}
+
+#pop6{
+	position: absolute;
+ 	transform: translate(1150px, 1660px);
+}
+/**красота**/
+#pop7{
+    position: absolute;
+    left: 4400px;
+    top: 2550px;
+}
+
+#pop8{
+	position: absolute;
+ 	transform: translate(1350px, 860px);
+}
+
+
+#pop9{
+	position: absolute;
+ 	transform: translate(1650px, 760px);
+}
+
+#pop10{
+	position: absolute;
+ 	transform: translate(1650px, 760px);
+}
+
+#pop11{
+    position: absolute;
+    left: 3521px;
+    top: 600px;
+}
 
 
 .navbar {
@@ -217,12 +451,14 @@ https://d2w9rnfcy7mm78.cloudfront.net/28726595/original_314b7bf8fb5fd51460da9fcd
 
 .navbar a{
 	opacity: 50%;
+    background-color: #fffffa;
+    border-radius: 8px ;
     color: black;
     text-decoration: none;
     padding: 5px;
     display: block;
     text-align: center;
-	filter: blur(0px);
+	filter: blur(2px);
 	transition-duration: 0.5s;
 }
 .navbar a:hover{
@@ -230,6 +466,16 @@ https://d2w9rnfcy7mm78.cloudfront.net/28726595/original_314b7bf8fb5fd51460da9fcd
 	transition-duration:0.5;
 	filter: blur(0px);
 
+}
+
+
+pre.clone {
+  position: absolute !important;
+  font-family: monospace;
+  background: rgba(0,0,0,0.00);
+  padding: 4px 8px;
+  border-radius: 4px;
+  pointer-events: none;
 }
 
 
@@ -241,14 +487,29 @@ https://d2w9rnfcy7mm78.cloudfront.net/28726595/original_314b7bf8fb5fd51460da9fcd
 	top: 2168px;
 	height: 400px;
     filter: drop-shadow(5px 5px 20px rgb(0, 221, 255));
-    mix-blend-mode:color-burn;
+        mix-blend-mode:multiply;
     z-index: 1;
+        filter: grayscale(100%) brightness(8);
+    transition: all 0.5s ease;
 }
+#an1:hover{
+    filter: none;
+}
+
 #an2{
     position: absolute;
     left: 3266px;
     top: 2650px;
- 
+        filter: grayscale(100%) brightness(8);
+    transition: all 0.5s ease;
+        mix-blend-mode:multiply; 
+    mask-image: linear-gradient(to top, transparent 0%, black 5%, black 95%, transparent 100%),
+                linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in;          
+}
+#an2:hover{
+    filter: none;
 }
 
 #an3{
@@ -256,46 +517,92 @@ https://d2w9rnfcy7mm78.cloudfront.net/28726595/original_314b7bf8fb5fd51460da9fcd
     left: 2980px;
     top: 2280px;
     scale: 25%;
- 
+        filter: grayscale(100%) brightness(4);
+    transition: all 0.5s ease; 
+            mix-blend-mode:multiply;
 }
+#an3:hover{
+    filter: none;
+}
+
 #an4{
     position: absolute;
     left: 2733px;
     top: 2476px;
-
- 
+        filter: grayscale(100%) brightness(8);
+    transition: all 0.5s ease;
+         mix-blend-mode:multiply;
 }
+#an4:hover{
+    filter: none;
+}
+
 #an5{
     position: absolute;
     left: 2344px;
     top: 2342px;
-
+        filter: grayscale(100%) brightness(8);
+    transition: all 0.5s ease;
+        mix-blend-mode:multiply;
+    mask-image: linear-gradient(to top, transparent 0%, black 5%, black 95%, transparent 100%),
+                linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in;          
 }
+#an5:hover{
+    filter: none;
+}
+
 #an6{
     position: absolute;
-    left: 2721px;
-    top: 2831px;
-
+    left: 2521px;
+        filter: grayscale(100%) brightness(8);
+    transition: all 0.5s ease;    top: 2831px;
+        mix-blend-mode:multiply;
+}
+#an6:hover{
+    filter: none;
 }
 #an7{
     position: absolute;
     left: 1850px;
     top: 2580px;
-
- 
+        filter: invert(80%) grayscale(100%) brightness(2);
+    transition: all 0.5s ease;
+         mix-blend-mode:multiply;
+    mask-image: linear-gradient(to top, transparent 0%, black 5%, black 95%, transparent 100%),
+                linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in;         
+}
+#an7:hover{
+    filter: none;
 }
 #an8{
     position: absolute;
     left: 1468px;
     top: 2847px;
-
+        filter: invert(80%) grayscale(100%) brightness(4);
+    transition: all 0.5s ease;
+    mix-blend-mode:multiply;   
+    mask-image: linear-gradient(to top, transparent 0%, black 5%, black 95%, transparent 100%),
+                linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in;       
 }
-
+#an8:hover{
+    filter: none;
+}
 #an9{
     position: absolute;
     left: 1867px;
     top: 2050px;
-
+        filter: grayscale(100%) brightness(8);
+    transition: all 0.5s ease;
+    mix-blend-mode:multiply; 
+}
+#an9:hover{
+    filter: none;
 }
 
 #an10{
@@ -303,212 +610,456 @@ https://d2w9rnfcy7mm78.cloudfront.net/28726595/original_314b7bf8fb5fd51460da9fcd
     left: 1241px;
     top: 3251px;
     scale: 20%;
- 
+    filter: grayscale(100%) brightness(8);
+    transition: all 0.5s ease;
+    mix-blend-mode:multiply; 
 }
+#an10:hover{
+    filter: none;
+}
+
+
 
 #an11{
     position: absolute;
     left: 1939px;
-
+    scale: 50%;
+    filter: grayscale(100%) brightness(8) blur(8px);
+    transition: all 0.5s ease;
+    mix-blend-mode:multiply; 
+}
+#an11:hover{
+    filter: none;
 }
 
 #an12{
     position: absolute;
     left: 1377px;
     top: 2330px;
-
+    filter: grayscale(100%) brightness(2);
+    transition: all 0.5s ease;
+    mix-blend-mode:multiply; 
+}
+#an12:hover{
+    filter: none;
 }
 
 #an13{
     position: absolute;
     left: 1450px;
     top: 1094px;
- 
+    filter: grayscale(100%) brightness(8);
+    transition: all 0.5s ease;
+    mix-blend-mode:multiply;
+    /**размытие краев**/
+    mask-image: linear-gradient(to top, transparent 0%, black 20%, black 80%, transparent 100%),
+                linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in;
 }
+#an13:hover{
+    filter: none;
+}
+
 #an14{
     position: absolute;
     left: 2448px;
     top: 784px;
- 
+    filter: grayscale(100%) brightness(8);
+    transition: all 0.5s ease;
+    mix-blend-mode:multiply;  
+            mask-image: linear-gradient(to top, transparent 0%, black 5%, black 95%, transparent 100%),
+                linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in;  
 }
+#an14:hover{
+    filter: none;
+}
+
 #an15{
     position: absolute;
     left: 3521px;
     top: 101px;
- 
+    scale: 200%;
+    filter: grayscale(100%) brightness(2);
+    transition: all 0.5s ease;
+    mix-blend-mode:multiply; 
+            mask-image: linear-gradient(to top, transparent 0%, black 5%, black 95%, transparent 100%),
+                linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in; 
 }
+#an15:hover{
+    filter: none;
+}
+
 #an16{
     position: absolute;
     left: 2425px;
     top: 411px;
- 
+    filter: grayscale(100%) brightness(4);
+    transition: all 0.5s ease;
+    mix-blend-mode:multiply;  
 }
+#an16:hover{
+    filter: none;
+}
+
 #an17{
     position: absolute;
     left: 2319px;
     top: 1370px;
-
-    filter: invert(100%);
-
- 
+    filter: invert(100%) grayscale(100%) brightness(1.2);
+    transition: all 0.5s ease;
+    mix-blend-mode:multiply;
+            mask-image: linear-gradient(to top, transparent 0%, black 5%, black 95%, transparent 100%),
+                linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in;       
 }
+#an17:hover{
+    filter: invert(100%);
+}
+
 #an18{
     position: absolute;
     left: 2016px;
     top: 885px;
- 
+    filter: grayscale(100%) brightness(4);
+    transition: all 0.5s ease;
+    mix-blend-mode:multiply; 
+            mask-image: linear-gradient(to top, transparent 0%, black 5%, black 95%, transparent 100%),
+                linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in;   
 }
+#an18:hover{
+    filter: none;
+}
+
 #an19{
     position: absolute;
     left: 1607px;
     top: 0px;
-
-
- 
+    filter: grayscale(100%) brightness(8);
+    transition: all 0.5s ease;
+    mix-blend-mode:multiply;  
+        mask-image: linear-gradient(to top, transparent 0%, black 5%, black 95%, transparent 100%),
+                linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in;   
 }
+#an19:hover{
+    filter: none;
+}
+
 #an20{
     position: absolute;
     left: 2562px;
     top: 25px;
- 
+    filter: grayscale(100%) brightness(2);
+    transition: all 0.5s ease;
+    mix-blend-mode:multiply;  
+            mask-image: linear-gradient(to top, transparent 0%, black 10%, black 90%, transparent 100%),
+                linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in;  
 }
-
+#an20:hover{
+    filter: none;
+}
 
 #an21{
     position: absolute;
     left: 4205px;
     top: 1054px;
-
     opacity: 10%;
- 
+    scale: 75%;
+    filter: grayscale(100%) brightness(8) blur(4px);
+    transition: all 0.5s ease;
+    mix-blend-mode:multiply;   
+}
+#an21:hover{
+    filter: blur(2px);    
+    opacity: 100%;
 }
 
 #an22{
     position: absolute;
-    left: 724px;
+    left: 100vw;
     top: 227px;
- 
+
+    filter: contrast(10) grayscale(100%) brightness(1);
+    transition: all 0.5s ease;
+    mix-blend-mode:multiply;  
+        mask-image: linear-gradient(to top, transparent 0%, black 5%, black 95%, transparent 100%),
+                linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in;   
 }
+#an22:hover{
+filter: none;
+}
+
 
 #an23{
     position: absolute;
     left: 891px;
     top: 790px;
- 
+    filter: invert(100%) grayscale(100%) brightness(8);
+    transition: all 0.5s ease;
+    mix-blend-mode:multiply; 
+            mask-image: linear-gradient(to top, transparent 0%, black 5%, black 95%, transparent 100%),
+                linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in;  
+}
+#an23:hover{
+    filter: invert(100%);
 }
 #an24{
     position: absolute;
     left: 585px;
     top: 1153px;
-    filter: invert(100%);
-
+    filter: invert(100%) grayscale(100%) brightness(1);
+    transition: all 0.5s ease;
+    mix-blend-mode:multiply; 
+            mask-image: linear-gradient(to top, transparent 0%, black 5%, black 95%, transparent 100%),
+                linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in;  
 }
+#an24:hover{
+    filter: invert(100%);
+}
+
 #an25{
     position: absolute;
     left: 716px;
     top: 1913px;
- 
+    filter: grayscale(100%) brightness(5);
+    transition: all 0.5s ease;
+    mix-blend-mode:multiply;
+            mask-image: linear-gradient(to top, transparent 0%, black 5%, black 95%, transparent 100%),
+                linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in;       
 }
+#an25:hover{
+    filter: none;
+}
+
 #an26{
     position: absolute;
     left: 169px;
     top: 2291px;
- 
+    filter: grayscale(100%) brightness(2);
+    transition: all 0.5s ease;
+    mix-blend-mode:multiply;  
 }
+#an26:hover{
+    filter: none;
+}
+
 #an27{
     position: absolute;
     left: 254px;
-    top: 444px;
- 
+    top: 100vh;
+    filter: contrast(1.3) grayscale(100%) brightness(4);
+    transition: all 0.5s ease;
+    mix-blend-mode:multiply; 
+            mask-image: linear-gradient(to top, transparent 0%, black 5%, black 95%, transparent 100%),
+                linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in;     
+}
+#an27:hover{
+    filter: contrast(1.3);
 }
 #an28{
     position: absolute;
     left: 4151px;
     top: 2220px;
- 
+    filter: grayscale(100%) brightness(8);
+    transition: all 0.5s ease;
+    mix-blend-mode:multiply;
+            mask-image: linear-gradient(to top, transparent 0%, black 5%, black 95%, transparent 100%),
+                linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in;  
 }
+#an28:hover{
+    filter: none;
+}
+
 #an29{
     position: absolute;
     left: 4522px;
     top: 3157px;
- 
+    filter: grayscale(100%) brightness(2);
+    transition: all 0.5s ease;
+    mix-blend-mode:multiply;  
 }
+#an29:hover{
+    filter: none;
+}
+
 #an30{
     position: absolute;
     left: 4730px;
     top: 3575px;
     scale: 25%;
- 
+    filter: grayscale(100%) brightness(8) blur(8px);
+    transition: all 0.5s ease;
+    mix-blend-mode:multiply;  
 }
-
-
-
+#an30:hover{
+    filter: none;
+}
 
 #an31{
     position: absolute;
     left: 4596px;
     top: 4088px;
- 
+    filter: grayscale(100%) brightness(2);
+    transition: all 0.5s ease;
+    mix-blend-mode:multiply;  
+}
+#an31:hover{
+    filter: none;
 }
 
 #an32{
     position: absolute;
     left: 4287px;
     top: 4517px;
-
+    filter: grayscale(100%) brightness(2);
+    transition: all 0.5s ease;
+    mix-blend-mode:multiply; 
+            mask-image: linear-gradient(to top, transparent 0%, black 15%, black 85%, transparent 100%),
+                linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in;  
+}
+#an32:hover{
+    filter: none;
 }
 
 #an33{
     position: absolute;
     left: 4000px;
     top: 5349px;
- 
+    filter: grayscale(100%) brightness(2) blur(4px);
+    transition: all 0.5s ease;
+    mix-blend-mode:multiply; 
 }
+#an33:hover{
+    filter: none;
+}
+
 #an34{
     position: absolute;
     left: 5073px;
     top: 5289px;
-    filter: invert(100%);
-    scale: 150%;
- 
+    scale:150%;
+    filter: invert(100%) grayscale(100%) brightness(1);
+    transition: all 0.5s ease;
+    mix-blend-mode:multiply; 
+        mask-image: linear-gradient(to top, transparent 0%, black 5%, black 95%, transparent 100%),
+                linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in;  
 }
+#an34:hover{
+    filter: invert(100%);
+}
+
 #an35{
     position: absolute;
     left: 4378px;
     top: 5034px;
- 
+    filter: contrast(4) grayscale(100%) brightness(1);
+    transition: all 0.5s ease;
+    mix-blend-mode:multiply;  
+        mask-image: linear-gradient(to top, transparent 0%, black 5%, black 95%, transparent 100%),
+                linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in;      
 }
+#an35:hover{
+    filter: none;
+}
+
 #an36{
     position: absolute;
     left: 4668px;
     top: 4694px;
-    filter: invert(100%);
- 
+    filter: invert(100%) grayscale(100%) brightness(2);
+    transition: all 0.5s ease;
+    mix-blend-mode:multiply;  
+            mask-image: linear-gradient(to top, transparent 0%, black 10%, black 90%, transparent 100%),
+                linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in;  
 }
+#an36:hover{
+    filter: invert(100%);
+}
+
 #an37{
     position: absolute;
     left: 4801px;
     top: 5627px;
- 
+    scale: 200%;
+    rotate: -15deg;
+    filter: grayscale(100%) blur(10px);
+    transition: all 0.5s ease;
+    mix-blend-mode:multiply;  
 }
+#an37:hover{
+    filter: blur(2px);
+}
+
 #an38{
     position: absolute;
     left: 5052px;
     top: 5529px;
-    mix-blend-mode:darken;
- 
+    filter: grayscale(100%) brightness(2);
+    transition: all 0.5s ease;
+    mix-blend-mode:multiply;   
+
 }
+#an38:hover{
+    filter: none;
+}
+
 #an39{
     position: absolute;
     left: 6241px;
     top: 5277px;
- 
+    filter: grayscale(100%) brightness(8);
+    transition: all 0.5s ease;
+    mix-blend-mode:multiply;  
 }
+#an39:hover{
+    filter: none;
+}
+
 #an40{
     position: absolute;
     left: 5281px;
     top: 4900px;
- 
+    filter: grayscale(100%) brightness(8);
+    transition: all 0.5s ease;
+    mix-blend-mode:multiply;
+        mask-image: linear-gradient(to top, transparent 0%, black 15%, black 90%, transparent 100%),
+                linear-gradient(to right, transparent 0%, black 15%, black 90%, transparent 100%);
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in;  
+}
+#an40:hover{
+    filter: none;
 }
 
 
@@ -518,91 +1069,205 @@ https://d2w9rnfcy7mm78.cloudfront.net/28726595/original_314b7bf8fb5fd51460da9fcd
     position: absolute;
     left: 5682px;
     top: 3978px;
- 
+    filter: grayscale(100%) brightness(8);
+    transition: all 0.5s ease;
+    mix-blend-mode:multiply;  
+        mask-image: linear-gradient(to top, transparent 0%, black 15%, black 90%, transparent 100%),
+                linear-gradient(to right, transparent 0%, black 15%, black 90%, transparent 100%);
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in;  
+}
+#an41:hover{
+    filter: none;
 }
 
 #an42{
     position: absolute;
     left: 5281px;
     top: 3637px;
- 
+    filter: grayscale(100%) brightness(2);
+    transition: all 0.5s ease;
+    mix-blend-mode:multiply;  
+}
+#an42:hover{
+    filter: none;
 }
 
 #an43{
     position: absolute;
     left: 6349px;
     top: 3778px;
- 
+    filter: grayscale(100%) brightness(8);
+    transition: all 0.5s ease;
+    mix-blend-mode:multiply;  
+        mask-image: linear-gradient(to top, transparent 0%, black 15%, black 90%, transparent 100%),
+                linear-gradient(to right, transparent 0%, black 15%, black 90%, transparent 100%);
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in;      
 }
+#an43:hover{
+    filter: none;
+}
+
 #an44{
     position: absolute;
-    left: 6265px;
+    left: 5565px;
     top: 3013px;
- 
+    scale: 200%;
+    filter: grayscale(100%) brightness(4);
+    transition: all 0.5s ease;
+    mix-blend-mode:multiply; 
+        mask-image: linear-gradient(to top, transparent 0%, black 15%, black 90%, transparent 100%),
+                linear-gradient(to right, transparent 0%, black 15%, black 90%, transparent 100%);
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in;   
 }
+#an44:hover{
+    filter: none;
+}
+
 #an45{
     position: absolute;
     left: 6650px;
     top: 2258px;
- 
+    filter: grayscale(100%) brightness(8);
+    transition: all 0.5s ease;
+    mix-blend-mode:multiply;  
 }
+#an45:hover{
+    filter: none;
+}
+
 #an46{
     position: absolute;
     left: 5494px;
     top: 1516px;
-
-    mix-blend-mode:exclusion;
- 
+    filter: grayscale(100%) brightness(8) invert();
+    transition: all 0.5s ease;
+    mix-blend-mode:multiply;      
+        mask-image: linear-gradient(to top, transparent 0%, black 10%, black 90%, transparent 100%),
+                linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in;  
 }
+#an46:hover{
+    filter: invert() hue-rotate(-180deg);
+}
+
 #an47{
     position: absolute;
     left: 6965px;
     top: 1445px;
-
+    scale: 175%;
+    filter: invert() grayscale(100%) brightness(2);
+    transition: all 0.5s ease;
+    mix-blend-mode:multiply;
+        mask-image: linear-gradient(to top, transparent 0%, black 15%, black 90%, transparent 100%),
+                linear-gradient(to right, transparent 0%, black 15%, black 90%, transparent 100%);
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in;      
 }
+#an47:hover{
+    filter: invert() hue-rotate(180deg);
+}
+
 #an48{
     position: absolute;
     left: 7200px;
-    top: -120px;
+    top: -220px;
     opacity: 10%;
     scale: 200%;
- 
+    filter: grayscale(100%) brightness(8) blur(4px);
+    transition: all 1.5s ease;
+    mix-blend-mode:multiply;  
 }
+#an48:hover{
+    filter: blur(2px);
+    scale:150%;
+    opacity: 50%;
+}
+
 #an49{
     position: absolute;
     left: 6125px;
     top: 2431px;
- 
+    filter: grayscale(100%) brightness(8);
+    transition: all 0.5s ease;
+    mix-blend-mode:multiply;  
+        mask-image: linear-gradient(to top, transparent 0%, black 10%, black 90%, transparent 100%),
+                linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in;      
 }
+#an49:hover{
+    filter: none;
+}
+
 #an50{
     position: absolute;
     left: 6846px;
-    top: 1694px;
- 
+    top: 1894px;
+    scale: 75%;
+    filter: invert(100%) grayscale(100%) brightness(1);
+    transition: all 0.5s ease;
+    mix-blend-mode:multiply;
+        mask-image: linear-gradient(to top, transparent 0%, black 10%, black 90%, transparent 100%),
+                linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in;        
 }
-
+#an50:hover{
+    filter: none;
+}
 
 #an51{
     position: absolute;
     left: 6703px;
     top: 2511px;
- 
+    filter: grayscale(100%) brightness(2);
+    transition: all 0.5s ease;
+    mix-blend-mode:multiply;  
+        mask-image: linear-gradient(to top, transparent 0%, black 15%, black 90%, transparent 100%),
+                linear-gradient(to right, transparent 0%, black 15%, black 90%, transparent 100%);
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in;      
+}
+#an51:hover{
+    filter: none;
 }
 
 #an52{
     position: absolute;
-    left: 7164px;
+    left: 7364px;
     top: 2609px;
- 
+
+    filter: grayscale(100%) brightness(4);
+    transition: all 0.5s ease;
+    mix-blend-mode:multiply;  
+        mask-image: linear-gradient(to top, transparent 0%, black 20%, black 80%, transparent 100%),
+                linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in;      
+}
+#an52:hover{
+    filter: none;
 }
 
 #an53{
     position: absolute;
     left: 7321px;
     top: 3501px;
- 
+    filter: grayscale(100%) brightness(2) invert();
+    transition: all 0.5s ease;
+    mix-blend-mode:multiply; 
+    mask-image: linear-gradient(to top, transparent 0%, black 20%, black 80%, transparent 100%),
+                linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in;    
 }
-
+#an53:hover{
+    filter: invert();
+}
 
 #water{
     position: absolute;
@@ -625,6 +1290,9 @@ https://d2w9rnfcy7mm78.cloudfront.net/28726595/original_314b7bf8fb5fd51460da9fcd
     color: white;
 }
 
+p{
+        font-family: 'IBMPlexSerif-regular';
+}
 .p1{
     font-family: 'IBMPlexSerif-italic';
 	color: black;
@@ -647,11 +1315,9 @@ p:hover{
 
 	width: 30vw;
 
-
-	
 	position: absolute;
 	left: 4100px;
-	top: 2832px;
+	top: 2850px;
 	z-index: 2;
 }
 
@@ -707,4 +1373,70 @@ p:hover{
 	z-index: 4;
 }
 
+
+
+#codeabout{
+    position: absolute;
+    left: 20px; 
+}
+
+#ht{
+    position: absolute;
+    left: 1vw;  
+    top:45vh;
+}
+#cs{
+        position: absolute;
+    left: 50vw;  
+        top:45vh;
+}
+
+/**
+#jss{
+        position: absolute;
+    left: 80vw;  
+        top:45vh;
+}**/
+#compik{
+    position: absolute;
+    bottom: 0px;
+
+    height: 200px;
+        filter: grayscale(100%) brightness(8);
+    transition: all 0.5s ease;
+    mix-blend-mode:multiply;   
+    mask-image: linear-gradient(to top, transparent 0%, black 20%, black 80%, transparent 100%),
+                linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in;              
+}
+
+
+.creacode{
+    font-family: 'IBMPlexSerif-regular';
+}
+
+a.left-area {
+    text-decoration: none;
+}
+
+a.left-area:link, a.left-area:visited {
+    color: blue;
+}
+
+a.left-area:hover {
+    color: red;
+}
+
+a.right-area {
+    text-decoration: none;
+}
+
+a.right-area:link, a.right-area:visited {
+    color: blue;
+}
+
+a.right-area:hover {
+    color: red;
+}
 

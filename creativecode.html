@@ -3,30 +3,82 @@
 
 
 <head>
-    <title>just walk</title>
+    <title>code walker</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link href="assets/typography.css" rel="stylesheet">
+    
 </head>
 
 <body>
 
-<p>привет, странник / это тест</p>
+<p id="codeabout">страничка с сурсами кодинга</p>
+
+
+      <nav class="navbar">
+          <ul>
+            <a href="index.html">обратно, гулять</a>
+
+          </ul>
+      </nav>
+
+<img id="compik" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2pzOHlsaTV4b2NwdGNsejNoNnVjc29xNXNvaGN6ZWxtMnBzNnNpaCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/ktcUyw6mBlMVa/giphy.gif">
 
 <br>
-<h1>HTML</h1>
-<a href="https://www.youtube.com/watch?v=HGTJBPNC-Gw" target="_blank" class="links">HTML & CSS</a>
-<a href="https://htmlreference.io/" target="_blank" class="links">html reference</a>
-<a href="https://happycoding.io/tutorials/html/" target="_blank" class="links">happycoding</a>
-<a href="https://www.youtube.com/watch?v=CkzbI1Tv_rQ" target="_blank" class="links" title="Laurel Video">Basics of HTML</a>
+<div class="creacode"></div>
+<p id="ht">HTML</p>
+
+<a class="left-area" href="https://www.youtube.com/watch?v=HGTJBPNC-Gw" target="_blank" class="links">HTML & CSS</a>
+<a class="left-area" href="https://htmlreference.io/" target="_blank" class="links">html reference</a>
+<a class="left-area" href="https://happycoding.io/tutorials/html/" target="_blank" class="links">happycoding</a>
+<a class="left-area" href="https://www.youtube.com/watch?v=CkzbI1Tv_rQ" target="_blank" class="links" title="Laurel Video">Basics of HTML</a>
 
 
-<h1>CSS</h1>
-<a href="https://cssreference.io/" target="_blank" class="links">css reference</a>
-<a href="https://www.cssmatic.com/noise-texture" target="_blank" class="links">cssmatic</a>
-<a href="https://www.are.na/laurel-schwulst/coding-from-life" target="_blank" class="links">coding-from-life</a>
-<a href="https://www.youtube.com/watch?v=BUZIaTHm_oE" target="_blank" class="links" title="Laurel Video">Basics of CSS</a>
+<p id="cs">CSS</p>
+<a class="are right-area" href="https://cssreference.io/" target="_blank" class="links">css reference</a>
+<a class="are right-area" href="https://www.cssmatic.com/noise-texture" target="_blank" class="links">cssmatic</a>
+<a class="are right-area" href="https://www.are.na/laurel-schwulst/coding-from-life" target="_blank" class="links">coding-from-life</a>
+<a class="are right-area" href="https://www.youtube.com/watch?v=BUZIaTHm_oE" target="_blank" class="links" title="Laurel Video">Basics of CSS</a>
 
+<!--
+<p id="jss">js</p>
+<a class="are right-area" href="https://cssreference.io/" target="_blank" class="links">css reference</a>
+-->
+</div>
+
+
+<script>
+window.addEventListener('DOMContentLoaded', () => {
+  const leftElements = document.querySelectorAll('.left-area');
+  const rightElements = document.querySelectorAll('.right-area');
+
+  const padding = 50; // отступы от края экрана
+
+  const viewportWidth = window.innerWidth;
+  const viewportHeight = window.innerHeight;
+  const halfWidth = viewportWidth / 2;
+
+  // Левая половина с отступами
+  leftElements.forEach(el => {
+    el.style.position = 'absolute';
+    el.style.left = `${padding + Math.random() * (halfWidth - 2 * padding)}px`;
+    el.style.top = `${padding + Math.random() * (viewportHeight - 2 * padding)}px`;
+  });
+
+  // Правая половина с отступами
+  rightElements.forEach(el => {
+    el.style.position = 'absolute';
+    el.style.left = `${halfWidth + padding + Math.random() * (halfWidth - 2 * padding)}px`;
+    el.style.top = `${padding + Math.random() * (viewportHeight - 2 * padding)}px`;
+  });
+
+  // Запрет скролла
+  document.body.style.overflow = 'hidden';
+});
+
+
+
+</script>
 
 </body>
 </html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="assets/stickers.png" alt="Картинка" class="draggable" id="dragImage">
+    <style>
+        .draggable {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  width: 200px;
+  height: auto;
+  cursor: grab;
+  user-select: none;
+}
+
+    </style>
+    <script>
+        const img = document.getElementById("dragImage");
+
+let isDragging = false;
+let offsetX = 0;
+let offsetY = 0;
+
+img.addEventListener("mousedown", (e) => {
+  isDragging = true;
+  offsetX = e.clientX - img.offsetLeft;
+  offsetY = e.clientY - img.offsetTop;
+  img.style.cursor = "grabbing";
+});
+
+document.addEventListener("mousemove", (e) => {
+  if (isDragging) {
+    img.style.left = `${e.clientX - offsetX}px`;
+    img.style.top = `${e.clientY - offsetY}px`;
+  }
+});
+
+document.addEventListener("mouseup", () => {
+  isDragging = false;
+  img.style.cursor = "grab";
+});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Walker Text Field</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: scroll;
+    }
+
+    canvas {
+      display: none; /* скрываем холст */
+    }
+
+    #text-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 7000px;
+      height: 6000px;
+      pointer-events: none;
+    }
+
+    .word {
+      position: absolute;
+      font-family: Georgia, serif;
+      font-size: 18px;
+      color: black;
+      filter: blur(4px);
+      transition: filter 0.3s ease;
+      pointer-events: auto;
+    }
+
+    .word:hover {
+      filter: blur(0);
+    }
+  </style>
+</head>
+<body>
+
+<div id="text-layer"></div>
+
+<!-- p5.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+
+<script>
+  let img;
+  let wordList = `Landscape appears today as a kind of archive a palimpsest more-than-human past soils speak stones testify forms remember`.split(' ');
+
+  function preload() {
+    img = loadImage('canvas.png');
+  }
+
+  function setup() {
+    createCanvas(7000, 6000);
+    noLoop();
+
+    img.loadPixels();
+    placeWordsNearDark();
+  }
+
+  function placeWordsNearDark() {
+    const step = 100;
+    let index = 0;
+
+    for (let y = 0; y < img.height; y += step) {
+      for (let x = 0; x < img.width; x += step) {
+        const i = (y * img.width + x) * 4;
+        const r = img.pixels[i];
+        const g = img.pixels[i + 1];
+        const b = img.pixels[i + 2];
+        const brightness = (r + g + b) / 3;
+
+        if (brightness < 50) {
+          const word = wordList[index % wordList.length];
+          const div = document.createElement('div');
+          div.className = 'word';
+          div.textContent = word;
+          div.style.left = `${x + random(-30, 30)}px`;
+          div.style.top = `${y + random(-30, 30)}px`;
+          document.getElementById('text-layer').appendChild(div);
+          index++;
+        }
+      }
+    }
+  }
+</script>
+
+</body>
+</html>

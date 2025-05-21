@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Walker Text Blur</title>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+    .word {
+      position: absolute;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: black;
+      pointer-events: auto;
+      white-space: nowrap;
+      filter: blur(4px);
+      transition: filter 0.4s ease;
+      opacity: 1;
+    }
+    .word:hover {
+      filter: blur(0px);
+    }
+  </style>
+</head>
+<body>
+<script>
+
+let walker;
+let words = [];
+let wordIndex = 0;
+let wordElements = [];
+let textInput = `
+Out*cene — лаборатория исследования выхода за фокусировку на человеческом дизайне, текстах, исследованиях и искусстве. Создаем медиа-платформу и проводим к лету выставку, размышляя о том, чем бы мы были вне антропоморфного. Основываясь на идее deep media studies, сфере между искусством, наукой и философией, наблюдаем за не-человеческими агентами, замедляемся, пишем "поэзию", ведем себя несерьезно и отдыхаем в исследовании.
+`;
+
+class Walker {
+  constructor() {
+    this.x = 50;
+    this.y = 50;
+    this.stepX = 200;
+    this.stepY = 90;
+  }
+
+  getPosition() {
+    return createVector(this.x, this.y);
+  }
+
+  step() {
+    this.x += this.stepX;
+    if (this.x > width - 300) { // Перенос по строкам
+      this.x = 50;
+      this.y += this.stepY;
+    }
+  }
+}
+
+function setup() {
+  createCanvas(7000, 6000);
+  walker = new Walker();
+  words = textInput.trim().split(/\s+/);
+  noLoop(); // Поскольку мы отрисовываем всё сразу
+  placeWords();
+}
+
+function placeWords() {
+  for (let word of words) {
+    let pos = walker.getPosition();
+    let div = createDiv(word);
+    div.class('word');
+    div.position(pos.x, pos.y);
+    wordElements.push(div);
+    walker.step();
+  }
+}
+
+</script>
+</body>
+</html>
